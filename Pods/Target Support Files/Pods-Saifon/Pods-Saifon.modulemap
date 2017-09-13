@@ -1,0 +1,6 @@
+framework module Pods_Saifon {
+  umbrella header "Pods-Saifon-umbrella.h"
+
+  export *
+  module * { export * }
+}

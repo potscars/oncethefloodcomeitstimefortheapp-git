@@ -1,0 +1,1109 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7466D95CD876F269FB2F430D /* Pods_Saifon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74349147E402B6C9212F0CF /* Pods_Saifon.framework */; };
+		9E6748231E65350A000C3C45 /* ic_wlevel_caution.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748171E65350A000C3C45 /* ic_wlevel_caution.png */; };
+		9E6748241E65350A000C3C45 /* ic_wlevel_caution@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748181E65350A000C3C45 /* ic_wlevel_caution@2x.png */; };
+		9E6748251E65350A000C3C45 /* ic_wlevel_caution@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748191E65350A000C3C45 /* ic_wlevel_caution@3x.png */; };
+		9E6748261E65350A000C3C45 /* ic_wlevel_danger.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67481A1E65350A000C3C45 /* ic_wlevel_danger.png */; };
+		9E6748271E65350A000C3C45 /* ic_wlevel_danger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67481B1E65350A000C3C45 /* ic_wlevel_danger@2x.png */; };
+		9E6748281E65350A000C3C45 /* ic_wlevel_danger@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67481C1E65350A000C3C45 /* ic_wlevel_danger@3x.png */; };
+		9E6748291E65350A000C3C45 /* ic_wlevel_safe.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67481D1E65350A000C3C45 /* ic_wlevel_safe.png */; };
+		9E67482A1E65350A000C3C45 /* ic_wlevel_safe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67481E1E65350A000C3C45 /* ic_wlevel_safe@2x.png */; };
+		9E67482B1E65350A000C3C45 /* ic_wlevel_safe@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67481F1E65350A000C3C45 /* ic_wlevel_safe@3x.png */; };
+		9E67482C1E65350A000C3C45 /* ic_wlevel_warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748201E65350A000C3C45 /* ic_wlevel_warning.png */; };
+		9E67482D1E65350A000C3C45 /* ic_wlevel_warning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748211E65350A000C3C45 /* ic_wlevel_warning@2x.png */; };
+		9E67482E1E65350A000C3C45 /* ic_wlevel_warning@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748221E65350A000C3C45 /* ic_wlevel_warning@3x.png */; };
+		9E6748351E653530000C3C45 /* ic_nextnav_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67482F1E653530000C3C45 /* ic_nextnav_black.png */; };
+		9E6748361E653530000C3C45 /* ic_nextnav_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748301E653530000C3C45 /* ic_nextnav_black@2x.png */; };
+		9E6748371E653530000C3C45 /* ic_nextnav_black@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748311E653530000C3C45 /* ic_nextnav_black@3x.png */; };
+		9E6748381E653530000C3C45 /* ic_nextnav_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748321E653530000C3C45 /* ic_nextnav_white.png */; };
+		9E6748391E653530000C3C45 /* ic_nextnav_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748331E653530000C3C45 /* ic_nextnav_white@2x.png */; };
+		9E67483A1E653530000C3C45 /* ic_nextnav_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748341E653530000C3C45 /* ic_nextnav_white@3x.png */; };
+		9E67483D1E65354E000C3C45 /* ic_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67483B1E65354E000C3C45 /* ic_error.png */; };
+		9E67483E1E65354E000C3C45 /* ic_internet_noconn.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67483C1E65354E000C3C45 /* ic_internet_noconn.png */; };
+		9E6748401E65356B000C3C45 /* ic_logoPolis.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67483F1E65356B000C3C45 /* ic_logoPolis.png */; };
+		9E67484D1E65358B000C3C45 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748411E65358B000C3C45 /* graph.png */; };
+		9E67484E1E65358B000C3C45 /* graph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748421E65358B000C3C45 /* graph@2x.png */; };
+		9E67484F1E65358B000C3C45 /* graph@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748431E65358B000C3C45 /* graph@3x.png */; };
+		9E6748501E65358B000C3C45 /* ic_arrow_menaik.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748441E65358B000C3C45 /* ic_arrow_menaik.png */; };
+		9E6748511E65358B000C3C45 /* ic_arrow_menaik@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748451E65358B000C3C45 /* ic_arrow_menaik@2x.png */; };
+		9E6748521E65358B000C3C45 /* ic_arrow_menaik@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748461E65358B000C3C45 /* ic_arrow_menaik@3x.png */; };
+		9E6748531E65358B000C3C45 /* ic_arrow_menurun.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748471E65358B000C3C45 /* ic_arrow_menurun.png */; };
+		9E6748541E65358B000C3C45 /* ic_arrow_menurun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748481E65358B000C3C45 /* ic_arrow_menurun@2x.png */; };
+		9E6748551E65358B000C3C45 /* ic_arrow_menurun@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748491E65358B000C3C45 /* ic_arrow_menurun@3x.png */; };
+		9E6748561E65358B000C3C45 /* ic_arrow_tiada.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67484A1E65358B000C3C45 /* ic_arrow_tiada.png */; };
+		9E6748571E65358B000C3C45 /* ic_arrow_tiada@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67484B1E65358B000C3C45 /* ic_arrow_tiada@2x.png */; };
+		9E6748581E65358B000C3C45 /* ic_arrow_tiada@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67484C1E65358B000C3C45 /* ic_arrow_tiada@3x.png */; };
+		9E67485C1E6535B0000C3C45 /* ic_graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748591E6535B0000C3C45 /* ic_graph.png */; };
+		9E67485D1E6535B0000C3C45 /* ic_graph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67485A1E6535B0000C3C45 /* ic_graph@2x.png */; };
+		9E67485E1E6535B0000C3C45 /* ic_graph@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67485B1E6535B0000C3C45 /* ic_graph@3x.png */; };
+		9E6748621E6535C9000C3C45 /* ic_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67485F1E6535C9000C3C45 /* ic_chart.png */; };
+		9E6748631E6535C9000C3C45 /* ic_chart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748601E6535C9000C3C45 /* ic_chart@2x.png */; };
+		9E6748641E6535C9000C3C45 /* ic_chart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748611E6535C9000C3C45 /* ic_chart@3x.png */; };
+		9E6748681E6535E6000C3C45 /* saifonbahaya.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748651E6535E6000C3C45 /* saifonbahaya.png */; };
+		9E6748691E6535E6000C3C45 /* saifonjaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748661E6535E6000C3C45 /* saifonjaga.png */; };
+		9E67486A1E6535E6000C3C45 /* saifonnormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748671E6535E6000C3C45 /* saifonnormal.png */; };
+		9E6748701E653649000C3C45 /* exampleimg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67486B1E653649000C3C45 /* exampleimg@2x.png */; };
+		9E6748711E653649000C3C45 /* imagebrokenplaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67486C1E653649000C3C45 /* imagebrokenplaceholder@2x.png */; };
+		9E6748721E653649000C3C45 /* imagebrokenplaceholder@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67486D1E653649000C3C45 /* imagebrokenplaceholder@3x.png */; };
+		9E6748731E653649000C3C45 /* imageloadingplaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67486E1E653649000C3C45 /* imageloadingplaceholder@2x.png */; };
+		9E6748741E653649000C3C45 /* imageloadingplaceholder@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67486F1E653649000C3C45 /* imageloadingplaceholder@3x.png */; };
+		9E6748781E65368F000C3C45 /* ic_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748751E65368F000C3C45 /* ic_refresh.png */; };
+		9E6748791E65368F000C3C45 /* ic_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748761E65368F000C3C45 /* ic_refresh@2x.png */; };
+		9E67487A1E65368F000C3C45 /* ic_refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748771E65368F000C3C45 /* ic_refresh@3x.png */; };
+		9E67487E1E65369F000C3C45 /* ic_tetapan.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67487B1E65369F000C3C45 /* ic_tetapan.png */; };
+		9E67487F1E65369F000C3C45 /* ic_tetapan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67487C1E65369F000C3C45 /* ic_tetapan@2x.png */; };
+		9E6748801E65369F000C3C45 /* ic_tetapan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67487D1E65369F000C3C45 /* ic_tetapan@3x.png */; };
+		9E6748841E6536AF000C3C45 /* ic_pesanan.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748811E6536AF000C3C45 /* ic_pesanan.png */; };
+		9E6748851E6536AF000C3C45 /* ic_pesanan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748821E6536AF000C3C45 /* ic_pesanan@2x.png */; };
+		9E6748861E6536AF000C3C45 /* ic_pesanan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748831E6536AF000C3C45 /* ic_pesanan@3x.png */; };
+		9E67488A1E6536C0000C3C45 /* ic_saifon_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748871E6536C0000C3C45 /* ic_saifon_home.png */; };
+		9E67488B1E6536C0000C3C45 /* ic_saifon_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748881E6536C0000C3C45 /* ic_saifon_home@2x.png */; };
+		9E67488C1E6536C0000C3C45 /* ic_saifon_home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748891E6536C0000C3C45 /* ic_saifon_home@3x.png */; };
+		9E6748901E6536DC000C3C45 /* saifonlogo_248.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67488D1E6536DC000C3C45 /* saifonlogo_248.png */; };
+		9E6748911E6536DC000C3C45 /* saifonlogo_348.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67488E1E6536DC000C3C45 /* saifonlogo_348.png */; };
+		9E6748921E6536DC000C3C45 /* saifonlogo_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E67488F1E6536DC000C3C45 /* saifonlogo_512.png */; };
+		9E6748941E653701000C3C45 /* ic_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748931E653701000C3C45 /* ic_info.png */; };
+		9E6748961E65371E000C3C45 /* bg1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748951E65371E000C3C45 /* bg1@2x.png */; };
+		9E67489A1E695C46000C3C45 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6748991E695C46000C3C45 /* WeatherVC.swift */; };
+		9E67489C1E696ACE000C3C45 /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E67489B1E696ACE000C3C45 /* WeatherRequest.swift */; };
+		9E67489E1E698081000C3C45 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E67489D1E698081000C3C45 /* WeatherCell.swift */; };
+		9E7F51CF1E6E677D005DE243 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51C81E6E677D005DE243 /* background.png */; };
+		9E7F51D01E6E677D005DE243 /* carbonmonoxide.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51C91E6E677D005DE243 /* carbonmonoxide.png */; };
+		9E7F51D11E6E677D005DE243 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51CA1E6E677D005DE243 /* cloud.png */; };
+		9E7F51D21E6E677D005DE243 /* luminousity.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51CB1E6E677D005DE243 /* luminousity.png */; };
+		9E7F51D31E6E677D005DE243 /* pm10.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51CC1E6E677D005DE243 /* pm10.png */; };
+		9E7F51D41E6E677D005DE243 /* pressure.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51CD1E6E677D005DE243 /* pressure.png */; };
+		9E7F51D51E6E677D005DE243 /* rain_gauge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51CE1E6E677D005DE243 /* rain_gauge.png */; };
+		9E7F51D81E6E69E3005DE243 /* saifon_compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51D61E6E69E3005DE243 /* saifon_compass.png */; };
+		9E7F51D91E6E69E3005DE243 /* saifon-compass_pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51D71E6E69E3005DE243 /* saifon-compass_pointer.png */; };
+		9E7F51DB1E6E6C23005DE243 /* ImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7F51DA1E6E6C23005DE243 /* ImageRotation.swift */; };
+		9E7F51DD1E700032005DE243 /* LoadingSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7F51DC1E700032005DE243 /* LoadingSpinner.swift */; };
+		9E7F51DF1E7138B2005DE243 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7F51DE1E7138B2005DE243 /* Alert.swift */; };
+		9E7F51E11E77983F005DE243 /* saifon-compass_pointer_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51E01E77983F005DE243 /* saifon-compass_pointer_1.png */; };
+		9E7F51EF1E77C698005DE243 /* ic_saifon_carbonmonoxide.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51E41E77C698005DE243 /* ic_saifon_carbonmonoxide.png */; };
+		9E7F51F01E77C698005DE243 /* ic_saifon_cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51E51E77C698005DE243 /* ic_saifon_cloud.png */; };
+		9E7F51F11E77C698005DE243 /* ic_saifon_compass_cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51E61E77C698005DE243 /* ic_saifon_compass_cloud.png */; };
+		9E7F51F21E77C698005DE243 /* ic_saifon_compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51E71E77C698005DE243 /* ic_saifon_compass.png */; };
+		9E7F51F31E77C698005DE243 /* ic_saifon_compasspointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51E81E77C698005DE243 /* ic_saifon_compasspointer.png */; };
+		9E7F51F41E77C698005DE243 /* ic_saifon_luminousity.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51E91E77C698005DE243 /* ic_saifon_luminousity.png */; };
+		9E7F51F51E77C698005DE243 /* ic_saifon_pm10.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51EA1E77C698005DE243 /* ic_saifon_pm10.png */; };
+		9E7F51F61E77C698005DE243 /* ic_saifon_pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51EB1E77C698005DE243 /* ic_saifon_pointer.png */; };
+		9E7F51F71E77C698005DE243 /* ic_saifon_pressure.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51EC1E77C698005DE243 /* ic_saifon_pressure.png */; };
+		9E7F51F81E77C698005DE243 /* ic_saifon_rain_gauge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51ED1E77C698005DE243 /* ic_saifon_rain_gauge.png */; };
+		9E7F51F91E77C698005DE243 /* ic_saifonweather_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51EE1E77C698005DE243 /* ic_saifonweather_bg.png */; };
+		9E7F51FC1E77D391005DE243 /* compass1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51FA1E77D391005DE243 /* compass1.png */; };
+		9E7F51FD1E77D391005DE243 /* compass2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51FB1E77D391005DE243 /* compass2.png */; };
+		9E7F51FF1E77DA38005DE243 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51FE1E77DA38005DE243 /* GoogleService-Info.plist */; };
+		9EFCCCD81E793FEA00324ADF /* bangunanbiru.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EFCCCD71E793FEA00324ADF /* bangunanbiru.png */; };
+		B7127C041CFE8EBB00FA87F9 /* ProcessLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7127C031CFE8EBB00FA87F9 /* ProcessLoginController.swift */; };
+		B7127C081CFECC3B00FA87F9 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7127C071CFECC3B00FA87F9 /* MainTabController.swift */; };
+		B7127C0A1CFED2AA00FA87F9 /* SaifonVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7127C091CFED2AA00FA87F9 /* SaifonVController.swift */; };
+		B7127C141CFEE28E00FA87F9 /* SaifonVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7127C131CFEE28E00FA87F9 /* SaifonVCCell.swift */; };
+		B7127C161CFFF2C600FA87F9 /* SaifonInfoVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7127C151CFFF2C600FA87F9 /* SaifonInfoVCCell.swift */; };
+		B71EC21B1DAC93DB008C35AA /* RLCListDetailsDisplayTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71EC21A1DAC93DB008C35AA /* RLCListDetailsDisplayTVC.swift */; };
+		B71EC21D1DACA874008C35AA /* RLCListDetailsDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71EC21C1DACA874008C35AA /* RLCListDetailsDisplayController.swift */; };
+		B72090201DA74CD900FB4E24 /* RLCListDisplayTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B720901F1DA74CD900FB4E24 /* RLCListDisplayTVC.swift */; };
+		B72ADCFF1D35FF2C009A4FFF /* HantarPesananTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ADCFE1D35FF2C009A4FFF /* HantarPesananTableVC.swift */; };
+		B72ADD031D361F41009A4FFF /* HPDaripadaTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ADD021D361F41009A4FFF /* HPDaripadaTVCell.swift */; };
+		B72ADD051D361F52009A4FFF /* HPKepadaTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ADD041D361F52009A4FFF /* HPKepadaTVCell.swift */; };
+		B72ADD071D361F65009A4FFF /* HPSubjekTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ADD061D361F65009A4FFF /* HPSubjekTVC.swift */; };
+		B72ADD091D361F84009A4FFF /* HPKandunganTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ADD081D361F84009A4FFF /* HPKandunganTVC.swift */; };
+		B72BE0331D1BC3D7003C2200 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BE0321D1BC3D7003C2200 /* WebServices.swift */; };
+		B72C32021D73D851003E0C84 /* SaifonErrorTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C32011D73D851003E0C84 /* SaifonErrorTVCell.swift */; };
+		B72C46041D9A78FB0096D9B6 /* WaterLevelLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C46031D9A78FB0096D9B6 /* WaterLevelLibrary.swift */; };
+		B7377F461D7D12FD00462128 /* Main_IPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7377F441D7D12FD00462128 /* Main_IPad.storyboard */; };
+		B73DEC051DA4DBB100C5ACD2 /* RiverListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73DEC041DA4DBB100C5ACD2 /* RiverListController.swift */; };
+		B73DEC0B1DA4FFA700C5ACD2 /* RLCErrorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73DEC0A1DA4FFA700C5ACD2 /* RLCErrorTVC.swift */; };
+		B74285791D128C2000AB6916 /* SaifonWLCInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74285781D128C2000AB6916 /* SaifonWLCInfoTVCell.swift */; };
+		B748210D1D0517FF005E503D /* SaifonInfoPicVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748210C1D0517FF005E503D /* SaifonInfoPicVCCell.swift */; };
+		B74BB0D51D090CBB00BCB474 /* SaifonWLInfoTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BB0D41D090CBB00BCB474 /* SaifonWLInfoTVController.swift */; };
+		B74BB0D71D090D4E00BCB474 /* SaifonInfoDetailsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BB0D61D090D4E00BCB474 /* SaifonInfoDetailsTVController.swift */; };
+		B74BB0D91D094E8900BCB474 /* SaifonWLInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BB0D81D094E8900BCB474 /* SaifonWLInfoTVCell.swift */; };
+		B74BB0DB1D09585600BCB474 /* SaifonInfoDescTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BB0DA1D09585600BCB474 /* SaifonInfoDescTVCell.swift */; };
+		B74D33711DEC2E1700208A03 /* RLCListGraphDetailsWebDisplayTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D33701DEC2E1700208A03 /* RLCListGraphDetailsWebDisplayTVC.swift */; };
+		B74F0EBB1E2617A5003887E4 /* RLCRiverDetailsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F0EBA1E2617A5003887E4 /* RLCRiverDetailsTVCell.swift */; };
+		B75425161DE6A10800D08F97 /* InitialNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75425151DE6A10800D08F97 /* InitialNavController.swift */; };
+		B754251A1DE7284300D08F97 /* RLCLoadingTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75425191DE7284300D08F97 /* RLCLoadingTVCell.swift */; };
+		B75A36821D6C29350097B540 /* Libraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A36811D6C29350097B540 /* Libraries.swift */; };
+		B76AFDCC1D3DE6A500BF491F /* TetapanTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76AFDCB1D3DE6A500BF491F /* TetapanTVC.swift */; };
+		B76AFDCE1D3F622800BF491F /* TetapanTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76AFDCD1D3F622800BF491F /* TetapanTVCell.swift */; };
+		B77AB4B01D9B7DCF00504AC0 /* CustomizedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77AB4AF1D9B7DCF00504AC0 /* CustomizedColors.swift */; };
+		B7837EAA1D1785810072FA7C /* ColorInHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7837EA91D1785810072FA7C /* ColorInHex.swift */; };
+		B7AD2ADA1D1B9B4C008E62DE /* SaifonInfoDescPicsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD2AD91D1B9B4C008E62DE /* SaifonInfoDescPicsTVCell.swift */; };
+		B7BFE9331DC8736200BC14F2 /* RLCListGraphDetailsDisplayTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BFE9321DC8736200BC14F2 /* RLCListGraphDetailsDisplayTVC.swift */; };
+		B7E012561DE7E32300E70F56 /* SaifonLoadingTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E012551DE7E32300E70F56 /* SaifonLoadingTVCell.swift */; };
+		B7E7F4101CFD2A8D002FB5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7F40F1CFD2A8D002FB5C3 /* AppDelegate.swift */; };
+		B7E7F4121CFD2A8D002FB5C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7F4111CFD2A8D002FB5C3 /* ViewController.swift */; };
+		B7E7F4151CFD2A8D002FB5C3 /* Main_IPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E7F4131CFD2A8D002FB5C3 /* Main_IPhone.storyboard */; };
+		B7E7F4171CFD2A8D002FB5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E7F4161CFD2A8D002FB5C3 /* Assets.xcassets */; };
+		B7E7F41A1CFD2A8D002FB5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E7F4181CFD2A8D002FB5C3 /* LaunchScreen.storyboard */; };
+		B7E7F4241CFD3DD1002FB5C3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7F4231CFD3DD1002FB5C3 /* LoginController.swift */; };
+		B7EF20EC1DCAF6740003FE5A /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF20EB1DCAF6740003FE5A /* URLs.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B8E18F6F8CF8A31166DB994 /* Pods-Saifon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saifon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saifon/Pods-Saifon.debug.xcconfig"; sourceTree = "<group>"; };
+		9E6748171E65350A000C3C45 /* ic_wlevel_caution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wlevel_caution.png; sourceTree = "<group>"; };
+		9E6748181E65350A000C3C45 /* ic_wlevel_caution@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_caution@2x.png"; sourceTree = "<group>"; };
+		9E6748191E65350A000C3C45 /* ic_wlevel_caution@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_caution@3x.png"; sourceTree = "<group>"; };
+		9E67481A1E65350A000C3C45 /* ic_wlevel_danger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wlevel_danger.png; sourceTree = "<group>"; };
+		9E67481B1E65350A000C3C45 /* ic_wlevel_danger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_danger@2x.png"; sourceTree = "<group>"; };
+		9E67481C1E65350A000C3C45 /* ic_wlevel_danger@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_danger@3x.png"; sourceTree = "<group>"; };
+		9E67481D1E65350A000C3C45 /* ic_wlevel_safe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wlevel_safe.png; sourceTree = "<group>"; };
+		9E67481E1E65350A000C3C45 /* ic_wlevel_safe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_safe@2x.png"; sourceTree = "<group>"; };
+		9E67481F1E65350A000C3C45 /* ic_wlevel_safe@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_safe@3x.png"; sourceTree = "<group>"; };
+		9E6748201E65350A000C3C45 /* ic_wlevel_warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wlevel_warning.png; sourceTree = "<group>"; };
+		9E6748211E65350A000C3C45 /* ic_wlevel_warning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_warning@2x.png"; sourceTree = "<group>"; };
+		9E6748221E65350A000C3C45 /* ic_wlevel_warning@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_warning@3x.png"; sourceTree = "<group>"; };
+		9E67482F1E653530000C3C45 /* ic_nextnav_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_nextnav_black.png; sourceTree = "<group>"; };
+		9E6748301E653530000C3C45 /* ic_nextnav_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_nextnav_black@2x.png"; sourceTree = "<group>"; };
+		9E6748311E653530000C3C45 /* ic_nextnav_black@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_nextnav_black@3x.png"; sourceTree = "<group>"; };
+		9E6748321E653530000C3C45 /* ic_nextnav_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_nextnav_white.png; sourceTree = "<group>"; };
+		9E6748331E653530000C3C45 /* ic_nextnav_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_nextnav_white@2x.png"; sourceTree = "<group>"; };
+		9E6748341E653530000C3C45 /* ic_nextnav_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_nextnav_white@3x.png"; sourceTree = "<group>"; };
+		9E67483B1E65354E000C3C45 /* ic_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_error.png; sourceTree = "<group>"; };
+		9E67483C1E65354E000C3C45 /* ic_internet_noconn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_internet_noconn.png; sourceTree = "<group>"; };
+		9E67483F1E65356B000C3C45 /* ic_logoPolis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_logoPolis.png; sourceTree = "<group>"; };
+		9E6748411E65358B000C3C45 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
+		9E6748421E65358B000C3C45 /* graph@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph@2x.png"; sourceTree = "<group>"; };
+		9E6748431E65358B000C3C45 /* graph@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph@3x.png"; sourceTree = "<group>"; };
+		9E6748441E65358B000C3C45 /* ic_arrow_menaik.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_menaik.png; sourceTree = "<group>"; };
+		9E6748451E65358B000C3C45 /* ic_arrow_menaik@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_arrow_menaik@2x.png"; sourceTree = "<group>"; };
+		9E6748461E65358B000C3C45 /* ic_arrow_menaik@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_arrow_menaik@3x.png"; sourceTree = "<group>"; };
+		9E6748471E65358B000C3C45 /* ic_arrow_menurun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_menurun.png; sourceTree = "<group>"; };
+		9E6748481E65358B000C3C45 /* ic_arrow_menurun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_arrow_menurun@2x.png"; sourceTree = "<group>"; };
+		9E6748491E65358B000C3C45 /* ic_arrow_menurun@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_arrow_menurun@3x.png"; sourceTree = "<group>"; };
+		9E67484A1E65358B000C3C45 /* ic_arrow_tiada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_tiada.png; sourceTree = "<group>"; };
+		9E67484B1E65358B000C3C45 /* ic_arrow_tiada@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_arrow_tiada@2x.png"; sourceTree = "<group>"; };
+		9E67484C1E65358B000C3C45 /* ic_arrow_tiada@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_arrow_tiada@3x.png"; sourceTree = "<group>"; };
+		9E6748591E6535B0000C3C45 /* ic_graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_graph.png; sourceTree = "<group>"; };
+		9E67485A1E6535B0000C3C45 /* ic_graph@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_graph@2x.png"; sourceTree = "<group>"; };
+		9E67485B1E6535B0000C3C45 /* ic_graph@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_graph@3x.png"; sourceTree = "<group>"; };
+		9E67485F1E6535C9000C3C45 /* ic_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_chart.png; sourceTree = "<group>"; };
+		9E6748601E6535C9000C3C45 /* ic_chart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_chart@2x.png"; sourceTree = "<group>"; };
+		9E6748611E6535C9000C3C45 /* ic_chart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_chart@3x.png"; sourceTree = "<group>"; };
+		9E6748651E6535E6000C3C45 /* saifonbahaya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saifonbahaya.png; sourceTree = "<group>"; };
+		9E6748661E6535E6000C3C45 /* saifonjaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saifonjaga.png; sourceTree = "<group>"; };
+		9E6748671E6535E6000C3C45 /* saifonnormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saifonnormal.png; sourceTree = "<group>"; };
+		9E67486B1E653649000C3C45 /* exampleimg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exampleimg@2x.png"; sourceTree = "<group>"; };
+		9E67486C1E653649000C3C45 /* imagebrokenplaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imagebrokenplaceholder@2x.png"; sourceTree = "<group>"; };
+		9E67486D1E653649000C3C45 /* imagebrokenplaceholder@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imagebrokenplaceholder@3x.png"; sourceTree = "<group>"; };
+		9E67486E1E653649000C3C45 /* imageloadingplaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageloadingplaceholder@2x.png"; sourceTree = "<group>"; };
+		9E67486F1E653649000C3C45 /* imageloadingplaceholder@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageloadingplaceholder@3x.png"; sourceTree = "<group>"; };
+		9E6748751E65368F000C3C45 /* ic_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_refresh.png; sourceTree = "<group>"; };
+		9E6748761E65368F000C3C45 /* ic_refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_refresh@2x.png"; sourceTree = "<group>"; };
+		9E6748771E65368F000C3C45 /* ic_refresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_refresh@3x.png"; sourceTree = "<group>"; };
+		9E67487B1E65369F000C3C45 /* ic_tetapan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tetapan.png; sourceTree = "<group>"; };
+		9E67487C1E65369F000C3C45 /* ic_tetapan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_tetapan@2x.png"; sourceTree = "<group>"; };
+		9E67487D1E65369F000C3C45 /* ic_tetapan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_tetapan@3x.png"; sourceTree = "<group>"; };
+		9E6748811E6536AF000C3C45 /* ic_pesanan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_pesanan.png; sourceTree = "<group>"; };
+		9E6748821E6536AF000C3C45 /* ic_pesanan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_pesanan@2x.png"; sourceTree = "<group>"; };
+		9E6748831E6536AF000C3C45 /* ic_pesanan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_pesanan@3x.png"; sourceTree = "<group>"; };
+		9E6748871E6536C0000C3C45 /* ic_saifon_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_home.png; sourceTree = "<group>"; };
+		9E6748881E6536C0000C3C45 /* ic_saifon_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_saifon_home@2x.png"; sourceTree = "<group>"; };
+		9E6748891E6536C0000C3C45 /* ic_saifon_home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_saifon_home@3x.png"; sourceTree = "<group>"; };
+		9E67488D1E6536DC000C3C45 /* saifonlogo_248.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saifonlogo_248.png; sourceTree = "<group>"; };
+		9E67488E1E6536DC000C3C45 /* saifonlogo_348.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saifonlogo_348.png; sourceTree = "<group>"; };
+		9E67488F1E6536DC000C3C45 /* saifonlogo_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saifonlogo_512.png; sourceTree = "<group>"; };
+		9E6748931E653701000C3C45 /* ic_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info.png; sourceTree = "<group>"; };
+		9E6748951E65371E000C3C45 /* bg1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg1@2x.png"; sourceTree = "<group>"; };
+		9E6748991E695C46000C3C45 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
+		9E67489B1E696ACE000C3C45 /* WeatherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
+		9E67489D1E698081000C3C45 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		9E7F51C81E6E677D005DE243 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		9E7F51C91E6E677D005DE243 /* carbonmonoxide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carbonmonoxide.png; sourceTree = "<group>"; };
+		9E7F51CA1E6E677D005DE243 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		9E7F51CB1E6E677D005DE243 /* luminousity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luminousity.png; sourceTree = "<group>"; };
+		9E7F51CC1E6E677D005DE243 /* pm10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pm10.png; sourceTree = "<group>"; };
+		9E7F51CD1E6E677D005DE243 /* pressure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pressure.png; sourceTree = "<group>"; };
+		9E7F51CE1E6E677D005DE243 /* rain_gauge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain_gauge.png; sourceTree = "<group>"; };
+		9E7F51D61E6E69E3005DE243 /* saifon_compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saifon_compass.png; sourceTree = "<group>"; };
+		9E7F51D71E6E69E3005DE243 /* saifon-compass_pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "saifon-compass_pointer.png"; sourceTree = "<group>"; };
+		9E7F51DA1E6E6C23005DE243 /* ImageRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRotation.swift; sourceTree = "<group>"; };
+		9E7F51DC1E700032005DE243 /* LoadingSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
+		9E7F51DE1E7138B2005DE243 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		9E7F51E01E77983F005DE243 /* saifon-compass_pointer_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "saifon-compass_pointer_1.png"; sourceTree = "<group>"; };
+		9E7F51E41E77C698005DE243 /* ic_saifon_carbonmonoxide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_carbonmonoxide.png; sourceTree = "<group>"; };
+		9E7F51E51E77C698005DE243 /* ic_saifon_cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_cloud.png; sourceTree = "<group>"; };
+		9E7F51E61E77C698005DE243 /* ic_saifon_compass_cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_compass_cloud.png; sourceTree = "<group>"; };
+		9E7F51E71E77C698005DE243 /* ic_saifon_compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_compass.png; sourceTree = "<group>"; };
+		9E7F51E81E77C698005DE243 /* ic_saifon_compasspointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_compasspointer.png; sourceTree = "<group>"; };
+		9E7F51E91E77C698005DE243 /* ic_saifon_luminousity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_luminousity.png; sourceTree = "<group>"; };
+		9E7F51EA1E77C698005DE243 /* ic_saifon_pm10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_pm10.png; sourceTree = "<group>"; };
+		9E7F51EB1E77C698005DE243 /* ic_saifon_pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_pointer.png; sourceTree = "<group>"; };
+		9E7F51EC1E77C698005DE243 /* ic_saifon_pressure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_pressure.png; sourceTree = "<group>"; };
+		9E7F51ED1E77C698005DE243 /* ic_saifon_rain_gauge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifon_rain_gauge.png; sourceTree = "<group>"; };
+		9E7F51EE1E77C698005DE243 /* ic_saifonweather_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_saifonweather_bg.png; sourceTree = "<group>"; };
+		9E7F51FA1E77D391005DE243 /* compass1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass1.png; sourceTree = "<group>"; };
+		9E7F51FB1E77D391005DE243 /* compass2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass2.png; sourceTree = "<group>"; };
+		9E7F51FE1E77DA38005DE243 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9EFCCCD71E793FEA00324ADF /* bangunanbiru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bangunanbiru.png; sourceTree = "<group>"; };
+		A74349147E402B6C9212F0CF /* Pods_Saifon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saifon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEE5B498A7EAE3B37F43C28F /* Pods-Saifon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saifon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Saifon/Pods-Saifon.release.xcconfig"; sourceTree = "<group>"; };
+		B7127C031CFE8EBB00FA87F9 /* ProcessLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessLoginController.swift; sourceTree = "<group>"; };
+		B7127C071CFECC3B00FA87F9 /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		B7127C091CFED2AA00FA87F9 /* SaifonVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonVController.swift; sourceTree = "<group>"; };
+		B7127C131CFEE28E00FA87F9 /* SaifonVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonVCCell.swift; sourceTree = "<group>"; };
+		B7127C151CFFF2C600FA87F9 /* SaifonInfoVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonInfoVCCell.swift; sourceTree = "<group>"; };
+		B71C671F1D9CEAED006F3FE2 /* Saifon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Saifon.entitlements; sourceTree = "<group>"; };
+		B71EC21A1DAC93DB008C35AA /* RLCListDetailsDisplayTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLCListDetailsDisplayTVC.swift; sourceTree = "<group>"; };
+		B71EC21C1DACA874008C35AA /* RLCListDetailsDisplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLCListDetailsDisplayController.swift; sourceTree = "<group>"; };
+		B720901F1DA74CD900FB4E24 /* RLCListDisplayTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLCListDisplayTVC.swift; sourceTree = "<group>"; };
+		B72ADCFE1D35FF2C009A4FFF /* HantarPesananTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HantarPesananTableVC.swift; sourceTree = "<group>"; };
+		B72ADD021D361F41009A4FFF /* HPDaripadaTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPDaripadaTVCell.swift; sourceTree = "<group>"; };
+		B72ADD041D361F52009A4FFF /* HPKepadaTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPKepadaTVCell.swift; sourceTree = "<group>"; };
+		B72ADD061D361F65009A4FFF /* HPSubjekTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPSubjekTVC.swift; sourceTree = "<group>"; };
+		B72ADD081D361F84009A4FFF /* HPKandunganTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPKandunganTVC.swift; sourceTree = "<group>"; };
+		B72BE0321D1BC3D7003C2200 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		B72C32011D73D851003E0C84 /* SaifonErrorTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonErrorTVCell.swift; sourceTree = "<group>"; };
+		B72C46031D9A78FB0096D9B6 /* WaterLevelLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaterLevelLibrary.swift; path = Libraries/WaterLevelLibrary.swift; sourceTree = "<group>"; };
+		B7377F451D7D12FD00462128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_IPad.storyboard; sourceTree = "<group>"; };
+		B73DEC041DA4DBB100C5ACD2 /* RiverListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiverListController.swift; sourceTree = "<group>"; };
+		B73DEC0A1DA4FFA700C5ACD2 /* RLCErrorTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLCErrorTVC.swift; sourceTree = "<group>"; };
+		B74285781D128C2000AB6916 /* SaifonWLCInfoTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonWLCInfoTVCell.swift; sourceTree = "<group>"; };
+		B748210C1D0517FF005E503D /* SaifonInfoPicVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonInfoPicVCCell.swift; sourceTree = "<group>"; };
+		B74BB0D41D090CBB00BCB474 /* SaifonWLInfoTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonWLInfoTVController.swift; sourceTree = "<group>"; };
+		B74BB0D61D090D4E00BCB474 /* SaifonInfoDetailsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonInfoDetailsTVController.swift; sourceTree = "<group>"; };
+		B74BB0D81D094E8900BCB474 /* SaifonWLInfoTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonWLInfoTVCell.swift; sourceTree = "<group>"; };
+		B74BB0DA1D09585600BCB474 /* SaifonInfoDescTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonInfoDescTVCell.swift; sourceTree = "<group>"; };
+		B74D33701DEC2E1700208A03 /* RLCListGraphDetailsWebDisplayTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLCListGraphDetailsWebDisplayTVC.swift; sourceTree = "<group>"; };
+		B74F0EBA1E2617A5003887E4 /* RLCRiverDetailsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLCRiverDetailsTVCell.swift; sourceTree = "<group>"; };
+		B75425151DE6A10800D08F97 /* InitialNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialNavController.swift; sourceTree = "<group>"; };
+		B75425191DE7284300D08F97 /* RLCLoadingTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLCLoadingTVCell.swift; sourceTree = "<group>"; };
+		B75A36811D6C29350097B540 /* Libraries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libraries.swift; sourceTree = "<group>"; };
+		B76AFDCB1D3DE6A500BF491F /* TetapanTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetapanTVC.swift; sourceTree = "<group>"; };
+		B76AFDCD1D3F622800BF491F /* TetapanTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetapanTVCell.swift; sourceTree = "<group>"; };
+		B77AB4AF1D9B7DCF00504AC0 /* CustomizedColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomizedColors.swift; path = Libraries/CustomizedColors.swift; sourceTree = "<group>"; };
+		B7837EA91D1785810072FA7C /* ColorInHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorInHex.swift; path = Libraries/ColorInHex.swift; sourceTree = "<group>"; };
+		B7AD2AD91D1B9B4C008E62DE /* SaifonInfoDescPicsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonInfoDescPicsTVCell.swift; sourceTree = "<group>"; };
+		B7BFE9321DC8736200BC14F2 /* RLCListGraphDetailsDisplayTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLCListGraphDetailsDisplayTVC.swift; sourceTree = "<group>"; };
+		B7D143E61CFD7AE2009D7F1A /* bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg2@2x.png"; path = "../../../XcodeProj/EAIntroView-master/Example/Resources/Intro/bg2@2x.png"; sourceTree = "<group>"; };
+		B7D143E71CFD7AE2009D7F1A /* bg3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg3@2x.png"; path = "../../../XcodeProj/EAIntroView-master/Example/Resources/Intro/bg3@2x.png"; sourceTree = "<group>"; };
+		B7D143E81CFD7AE2009D7F1A /* bg4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg4@2x.png"; path = "../../../XcodeProj/EAIntroView-master/Example/Resources/Intro/bg4@2x.png"; sourceTree = "<group>"; };
+		B7E012551DE7E32300E70F56 /* SaifonLoadingTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaifonLoadingTVCell.swift; sourceTree = "<group>"; };
+		B7E7F40C1CFD2A8C002FB5C3 /* Saifon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saifon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E7F40F1CFD2A8D002FB5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7E7F4111CFD2A8D002FB5C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7E7F4141CFD2A8D002FB5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_IPhone.storyboard; sourceTree = "<group>"; };
+		B7E7F4161CFD2A8D002FB5C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7E7F4191CFD2A8D002FB5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7E7F41B1CFD2A8D002FB5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E7F4231CFD3DD1002FB5C3 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		B7EF20EB1DCAF6740003FE5A /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLs.swift; path = Libraries/URLs.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7E7F4091CFD2A8C002FB5C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7466D95CD876F269FB2F430D /* Pods_Saifon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E6748981E695BE7000C3C45 /* SensorStatus */ = {
+			isa = PBXGroup;
+			children = (
+				9E6748991E695C46000C3C45 /* WeatherVC.swift */,
+				9E67489B1E696ACE000C3C45 /* WeatherRequest.swift */,
+				9E67489D1E698081000C3C45 /* WeatherCell.swift */,
+			);
+			name = SensorStatus;
+			sourceTree = "<group>";
+		};
+		9E7F51C71E6E6771005DE243 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				9EFCCCD71E793FEA00324ADF /* bangunanbiru.png */,
+				9E7F51FA1E77D391005DE243 /* compass1.png */,
+				9E7F51FB1E77D391005DE243 /* compass2.png */,
+				9E7F51E41E77C698005DE243 /* ic_saifon_carbonmonoxide.png */,
+				9E7F51E51E77C698005DE243 /* ic_saifon_cloud.png */,
+				9E7F51E61E77C698005DE243 /* ic_saifon_compass_cloud.png */,
+				9E7F51E71E77C698005DE243 /* ic_saifon_compass.png */,
+				9E7F51E81E77C698005DE243 /* ic_saifon_compasspointer.png */,
+				9E7F51E91E77C698005DE243 /* ic_saifon_luminousity.png */,
+				9E7F51EA1E77C698005DE243 /* ic_saifon_pm10.png */,
+				9E7F51EB1E77C698005DE243 /* ic_saifon_pointer.png */,
+				9E7F51EC1E77C698005DE243 /* ic_saifon_pressure.png */,
+				9E7F51ED1E77C698005DE243 /* ic_saifon_rain_gauge.png */,
+				9E7F51EE1E77C698005DE243 /* ic_saifonweather_bg.png */,
+				9E7F51E01E77983F005DE243 /* saifon-compass_pointer_1.png */,
+				9E7F51D61E6E69E3005DE243 /* saifon_compass.png */,
+				9E7F51D71E6E69E3005DE243 /* saifon-compass_pointer.png */,
+				9E7F51C81E6E677D005DE243 /* background.png */,
+				9E7F51C91E6E677D005DE243 /* carbonmonoxide.png */,
+				9E7F51CA1E6E677D005DE243 /* cloud.png */,
+				9E7F51CB1E6E677D005DE243 /* luminousity.png */,
+				9E7F51CC1E6E677D005DE243 /* pm10.png */,
+				9E7F51CD1E6E677D005DE243 /* pressure.png */,
+				9E7F51CE1E6E677D005DE243 /* rain_gauge.png */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
+		B7127C0B1CFED2CF00FA87F9 /* SaifonController */ = {
+			isa = PBXGroup;
+			children = (
+				B772B0D41D937B75004B0E0F /* WaterLevel */,
+				B772B0D31D937B50004B0E0F /* InfoDetails */,
+				B772B0D21D937392004B0E0F /* Main */,
+			);
+			name = SaifonController;
+			sourceTree = "<group>";
+		};
+		B7127C0C1CFEE06300FA87F9 /* SaifonStatus */ = {
+			isa = PBXGroup;
+			children = (
+				9E6748591E6535B0000C3C45 /* ic_graph.png */,
+				9E67485A1E6535B0000C3C45 /* ic_graph@2x.png */,
+				9E67485B1E6535B0000C3C45 /* ic_graph@3x.png */,
+				9E67485F1E6535C9000C3C45 /* ic_chart.png */,
+				9E6748601E6535C9000C3C45 /* ic_chart@2x.png */,
+				9E6748611E6535C9000C3C45 /* ic_chart@3x.png */,
+				9E6748651E6535E6000C3C45 /* saifonbahaya.png */,
+				9E6748661E6535E6000C3C45 /* saifonjaga.png */,
+				9E6748671E6535E6000C3C45 /* saifonnormal.png */,
+				9E6748411E65358B000C3C45 /* graph.png */,
+				9E6748421E65358B000C3C45 /* graph@2x.png */,
+				9E6748431E65358B000C3C45 /* graph@3x.png */,
+				9E6748441E65358B000C3C45 /* ic_arrow_menaik.png */,
+				9E6748451E65358B000C3C45 /* ic_arrow_menaik@2x.png */,
+				9E6748461E65358B000C3C45 /* ic_arrow_menaik@3x.png */,
+				9E6748471E65358B000C3C45 /* ic_arrow_menurun.png */,
+				9E6748481E65358B000C3C45 /* ic_arrow_menurun@2x.png */,
+				9E6748491E65358B000C3C45 /* ic_arrow_menurun@3x.png */,
+				9E67484A1E65358B000C3C45 /* ic_arrow_tiada.png */,
+				9E67484B1E65358B000C3C45 /* ic_arrow_tiada@2x.png */,
+				9E67484C1E65358B000C3C45 /* ic_arrow_tiada@3x.png */,
+			);
+			name = SaifonStatus;
+			sourceTree = "<group>";
+		};
+		B72ADCFD1D35FD21009A4FFF /* HantarPesananController */ = {
+			isa = PBXGroup;
+			children = (
+				B72ADCFE1D35FF2C009A4FFF /* HantarPesananTableVC.swift */,
+				B72ADD021D361F41009A4FFF /* HPDaripadaTVCell.swift */,
+				B72ADD041D361F52009A4FFF /* HPKepadaTVCell.swift */,
+				B72ADD061D361F65009A4FFF /* HPSubjekTVC.swift */,
+				B72ADD081D361F84009A4FFF /* HPKandunganTVC.swift */,
+			);
+			name = HantarPesananController;
+			sourceTree = "<group>";
+		};
+		B72C31FC1D704A56003E0C84 /* ErrorImages */ = {
+			isa = PBXGroup;
+			children = (
+				9E67483B1E65354E000C3C45 /* ic_error.png */,
+				9E67483C1E65354E000C3C45 /* ic_internet_noconn.png */,
+			);
+			name = ErrorImages;
+			sourceTree = "<group>";
+		};
+		B73DEBFC1DA4BD8200C5ACD2 /* RiverSelectImages */ = {
+			isa = PBXGroup;
+			children = (
+				9E6748171E65350A000C3C45 /* ic_wlevel_caution.png */,
+				9E6748181E65350A000C3C45 /* ic_wlevel_caution@2x.png */,
+				9E6748191E65350A000C3C45 /* ic_wlevel_caution@3x.png */,
+				9E67481A1E65350A000C3C45 /* ic_wlevel_danger.png */,
+				9E67481B1E65350A000C3C45 /* ic_wlevel_danger@2x.png */,
+				9E67481C1E65350A000C3C45 /* ic_wlevel_danger@3x.png */,
+				9E67481D1E65350A000C3C45 /* ic_wlevel_safe.png */,
+				9E67481E1E65350A000C3C45 /* ic_wlevel_safe@2x.png */,
+				9E67481F1E65350A000C3C45 /* ic_wlevel_safe@3x.png */,
+				9E6748201E65350A000C3C45 /* ic_wlevel_warning.png */,
+				9E6748211E65350A000C3C45 /* ic_wlevel_warning@2x.png */,
+				9E6748221E65350A000C3C45 /* ic_wlevel_warning@3x.png */,
+				9E67482F1E653530000C3C45 /* ic_nextnav_black.png */,
+				9E6748301E653530000C3C45 /* ic_nextnav_black@2x.png */,
+				9E6748311E653530000C3C45 /* ic_nextnav_black@3x.png */,
+				9E6748321E653530000C3C45 /* ic_nextnav_white.png */,
+				9E6748331E653530000C3C45 /* ic_nextnav_white@2x.png */,
+				9E6748341E653530000C3C45 /* ic_nextnav_white@3x.png */,
+			);
+			name = RiverSelectImages;
+			sourceTree = "<group>";
+		};
+		B73DEC031DA4DB4300C5ACD2 /* RiverListController */ = {
+			isa = PBXGroup;
+			children = (
+				B73DEC041DA4DBB100C5ACD2 /* RiverListController.swift */,
+				B73DEC0A1DA4FFA700C5ACD2 /* RLCErrorTVC.swift */,
+				B720901F1DA74CD900FB4E24 /* RLCListDisplayTVC.swift */,
+				B71EC21A1DAC93DB008C35AA /* RLCListDetailsDisplayTVC.swift */,
+				B71EC21C1DACA874008C35AA /* RLCListDetailsDisplayController.swift */,
+				B7BFE9321DC8736200BC14F2 /* RLCListGraphDetailsDisplayTVC.swift */,
+				B75425191DE7284300D08F97 /* RLCLoadingTVCell.swift */,
+				B74D33701DEC2E1700208A03 /* RLCListGraphDetailsWebDisplayTVC.swift */,
+				B74F0EBA1E2617A5003887E4 /* RLCRiverDetailsTVCell.swift */,
+			);
+			name = RiverListController;
+			sourceTree = "<group>";
+		};
+		B74821071D0512EB005E503D /* DummyImage */ = {
+			isa = PBXGroup;
+			children = (
+				9E67486B1E653649000C3C45 /* exampleimg@2x.png */,
+				9E67486C1E653649000C3C45 /* imagebrokenplaceholder@2x.png */,
+				9E67486D1E653649000C3C45 /* imagebrokenplaceholder@3x.png */,
+				9E67486E1E653649000C3C45 /* imageloadingplaceholder@2x.png */,
+				9E67486F1E653649000C3C45 /* imageloadingplaceholder@3x.png */,
+			);
+			name = DummyImage;
+			sourceTree = "<group>";
+		};
+		B75A36851D6EA8AE0097B540 /* SampleImage */ = {
+			isa = PBXGroup;
+			children = (
+				9E67483F1E65356B000C3C45 /* ic_logoPolis.png */,
+			);
+			name = SampleImage;
+			sourceTree = "<group>";
+		};
+		B75A368A1D6EF2E50097B540 /* AboutImages */ = {
+			isa = PBXGroup;
+			children = (
+				9E6748931E653701000C3C45 /* ic_info.png */,
+			);
+			name = AboutImages;
+			sourceTree = "<group>";
+		};
+		B76E14601D3C96D4009BF9D4 /* TetapanController */ = {
+			isa = PBXGroup;
+			children = (
+				B76AFDCB1D3DE6A500BF491F /* TetapanTVC.swift */,
+				B76AFDCD1D3F622800BF491F /* TetapanTVCell.swift */,
+			);
+			name = TetapanController;
+			sourceTree = "<group>";
+		};
+		B772B0D21D937392004B0E0F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B7127C091CFED2AA00FA87F9 /* SaifonVController.swift */,
+				B748210C1D0517FF005E503D /* SaifonInfoPicVCCell.swift */,
+				B72C32011D73D851003E0C84 /* SaifonErrorTVCell.swift */,
+				B7127C131CFEE28E00FA87F9 /* SaifonVCCell.swift */,
+				B7E012551DE7E32300E70F56 /* SaifonLoadingTVCell.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		B772B0D31D937B50004B0E0F /* InfoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B7AD2AD91D1B9B4C008E62DE /* SaifonInfoDescPicsTVCell.swift */,
+				B74BB0DA1D09585600BCB474 /* SaifonInfoDescTVCell.swift */,
+				B74BB0D61D090D4E00BCB474 /* SaifonInfoDetailsTVController.swift */,
+				B7127C151CFFF2C600FA87F9 /* SaifonInfoVCCell.swift */,
+			);
+			name = InfoDetails;
+			sourceTree = "<group>";
+		};
+		B772B0D41D937B75004B0E0F /* WaterLevel */ = {
+			isa = PBXGroup;
+			children = (
+				B74BB0D41D090CBB00BCB474 /* SaifonWLInfoTVController.swift */,
+				B74285781D128C2000AB6916 /* SaifonWLCInfoTVCell.swift */,
+				B74BB0D81D094E8900BCB474 /* SaifonWLInfoTVCell.swift */,
+			);
+			name = WaterLevel;
+			sourceTree = "<group>";
+		};
+		B7837EA81D1785460072FA7C /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B7837EA91D1785810072FA7C /* ColorInHex.swift */,
+				B72BE0321D1BC3D7003C2200 /* WebServices.swift */,
+				B75A36811D6C29350097B540 /* Libraries.swift */,
+				B72C46031D9A78FB0096D9B6 /* WaterLevelLibrary.swift */,
+				B77AB4AF1D9B7DCF00504AC0 /* CustomizedColors.swift */,
+				B7EF20EB1DCAF6740003FE5A /* URLs.swift */,
+				9E7F51DA1E6E6C23005DE243 /* ImageRotation.swift */,
+				9E7F51DC1E700032005DE243 /* LoadingSpinner.swift */,
+				9E7F51DE1E7138B2005DE243 /* Alert.swift */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		B7D143DB1CFD74C6009D7F1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E7F51C71E6E6771005DE243 /* Weather */,
+				B73DEBFC1DA4BD8200C5ACD2 /* RiverSelectImages */,
+				B72C31FC1D704A56003E0C84 /* ErrorImages */,
+				B75A368A1D6EF2E50097B540 /* AboutImages */,
+				B75A36851D6EA8AE0097B540 /* SampleImage */,
+				B74821071D0512EB005E503D /* DummyImage */,
+				B7127C0C1CFEE06300FA87F9 /* SaifonStatus */,
+				B7D143DF1CFD766A009D7F1A /* Main */,
+				B7D143DC1CFD74E8009D7F1A /* Intro */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B7D143DC1CFD74E8009D7F1A /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				B7D143E61CFD7AE2009D7F1A /* bg2@2x.png */,
+				B7D143E71CFD7AE2009D7F1A /* bg3@2x.png */,
+				B7D143E81CFD7AE2009D7F1A /* bg4@2x.png */,
+				9E6748951E65371E000C3C45 /* bg1@2x.png */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
+		B7D143DF1CFD766A009D7F1A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9E6748751E65368F000C3C45 /* ic_refresh.png */,
+				9E6748761E65368F000C3C45 /* ic_refresh@2x.png */,
+				9E6748771E65368F000C3C45 /* ic_refresh@3x.png */,
+				9E67487B1E65369F000C3C45 /* ic_tetapan.png */,
+				9E67487C1E65369F000C3C45 /* ic_tetapan@2x.png */,
+				9E67487D1E65369F000C3C45 /* ic_tetapan@3x.png */,
+				9E6748811E6536AF000C3C45 /* ic_pesanan.png */,
+				9E6748821E6536AF000C3C45 /* ic_pesanan@2x.png */,
+				9E6748831E6536AF000C3C45 /* ic_pesanan@3x.png */,
+				9E6748871E6536C0000C3C45 /* ic_saifon_home.png */,
+				9E6748881E6536C0000C3C45 /* ic_saifon_home@2x.png */,
+				9E6748891E6536C0000C3C45 /* ic_saifon_home@3x.png */,
+				9E67488D1E6536DC000C3C45 /* saifonlogo_248.png */,
+				9E67488E1E6536DC000C3C45 /* saifonlogo_348.png */,
+				9E67488F1E6536DC000C3C45 /* saifonlogo_512.png */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		B7E7F4031CFD2A8C002FB5C3 = {
+			isa = PBXGroup;
+			children = (
+				B7E7F40E1CFD2A8D002FB5C3 /* Saifon */,
+				B7E7F40D1CFD2A8C002FB5C3 /* Products */,
+				FDD219B221B268F5D78F6388 /* Pods */,
+				E5F6B6AF7082AF22043AF972 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B7E7F40D1CFD2A8C002FB5C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7E7F40C1CFD2A8C002FB5C3 /* Saifon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7E7F40E1CFD2A8D002FB5C3 /* Saifon */ = {
+			isa = PBXGroup;
+			children = (
+				B71C671F1D9CEAED006F3FE2 /* Saifon.entitlements */,
+				9E7F51FE1E77DA38005DE243 /* GoogleService-Info.plist */,
+				9E6748981E695BE7000C3C45 /* SensorStatus */,
+				B73DEC031DA4DB4300C5ACD2 /* RiverListController */,
+				B76E14601D3C96D4009BF9D4 /* TetapanController */,
+				B72ADCFD1D35FD21009A4FFF /* HantarPesananController */,
+				B7837EA81D1785460072FA7C /* Libraries */,
+				B7127C0B1CFED2CF00FA87F9 /* SaifonController */,
+				B7D143DB1CFD74C6009D7F1A /* Resources */,
+				B7E7F40F1CFD2A8D002FB5C3 /* AppDelegate.swift */,
+				B7E7F4111CFD2A8D002FB5C3 /* ViewController.swift */,
+				B7E7F4131CFD2A8D002FB5C3 /* Main_IPhone.storyboard */,
+				B7377F441D7D12FD00462128 /* Main_IPad.storyboard */,
+				B7E7F4161CFD2A8D002FB5C3 /* Assets.xcassets */,
+				B7E7F4181CFD2A8D002FB5C3 /* LaunchScreen.storyboard */,
+				B7E7F41B1CFD2A8D002FB5C3 /* Info.plist */,
+				B7E7F4231CFD3DD1002FB5C3 /* LoginController.swift */,
+				B7127C031CFE8EBB00FA87F9 /* ProcessLoginController.swift */,
+				B7127C071CFECC3B00FA87F9 /* MainTabController.swift */,
+				B75425151DE6A10800D08F97 /* InitialNavController.swift */,
+			);
+			path = Saifon;
+			sourceTree = "<group>";
+		};
+		E5F6B6AF7082AF22043AF972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A74349147E402B6C9212F0CF /* Pods_Saifon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDD219B221B268F5D78F6388 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B8E18F6F8CF8A31166DB994 /* Pods-Saifon.debug.xcconfig */,
+				AEE5B498A7EAE3B37F43C28F /* Pods-Saifon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7E7F40B1CFD2A8C002FB5C3 /* Saifon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7E7F41E1CFD2A8D002FB5C3 /* Build configuration list for PBXNativeTarget "Saifon" */;
+			buildPhases = (
+				4FF33D419D0B9E3603555132 /* [CP] Check Pods Manifest.lock */,
+				B7E7F4081CFD2A8C002FB5C3 /* Sources */,
+				B7E7F4091CFD2A8C002FB5C3 /* Frameworks */,
+				B7E7F40A1CFD2A8C002FB5C3 /* Resources */,
+				A214715F760048C88DAA4365 /* [CP] Embed Pods Frameworks */,
+				E5F37117E0D543F5FF5692A0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Saifon;
+			productName = Saifon;
+			productReference = B7E7F40C1CFD2A8C002FB5C3 /* Saifon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7E7F4041CFD2A8C002FB5C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Ingeniworks Sdn Bhd";
+				TargetAttributes = {
+					B7E7F40B1CFD2A8C002FB5C3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6CSE68LD7S;
+						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B7E7F4071CFD2A8C002FB5C3 /* Build configuration list for PBXProject "Saifon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7E7F4031CFD2A8C002FB5C3;
+			productRefGroup = B7E7F40D1CFD2A8C002FB5C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7E7F40B1CFD2A8C002FB5C3 /* Saifon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7E7F40A1CFD2A8C002FB5C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E6748371E653530000C3C45 /* ic_nextnav_black@3x.png in Resources */,
+				9E67483D1E65354E000C3C45 /* ic_error.png in Resources */,
+				9E6748621E6535C9000C3C45 /* ic_chart.png in Resources */,
+				9E6748351E653530000C3C45 /* ic_nextnav_black.png in Resources */,
+				9E6748231E65350A000C3C45 /* ic_wlevel_caution.png in Resources */,
+				9E67482B1E65350A000C3C45 /* ic_wlevel_safe@3x.png in Resources */,
+				9E6748501E65358B000C3C45 /* ic_arrow_menaik.png in Resources */,
+				9E67482E1E65350A000C3C45 /* ic_wlevel_warning@3x.png in Resources */,
+				9E7F51F31E77C698005DE243 /* ic_saifon_compasspointer.png in Resources */,
+				9E6748561E65358B000C3C45 /* ic_arrow_tiada.png in Resources */,
+				9E67485E1E6535B0000C3C45 /* ic_graph@3x.png in Resources */,
+				9E6748361E653530000C3C45 /* ic_nextnav_black@2x.png in Resources */,
+				9E6748941E653701000C3C45 /* ic_info.png in Resources */,
+				9E67483A1E653530000C3C45 /* ic_nextnav_white@3x.png in Resources */,
+				9E6748841E6536AF000C3C45 /* ic_pesanan.png in Resources */,
+				B7E7F41A1CFD2A8D002FB5C3 /* LaunchScreen.storyboard in Resources */,
+				9E6748551E65358B000C3C45 /* ic_arrow_menurun@3x.png in Resources */,
+				9EFCCCD81E793FEA00324ADF /* bangunanbiru.png in Resources */,
+				9E6748921E6536DC000C3C45 /* saifonlogo_512.png in Resources */,
+				9E67487A1E65368F000C3C45 /* ic_refresh@3x.png in Resources */,
+				9E7F51F11E77C698005DE243 /* ic_saifon_compass_cloud.png in Resources */,
+				9E6748741E653649000C3C45 /* imageloadingplaceholder@3x.png in Resources */,
+				9E6748271E65350A000C3C45 /* ic_wlevel_danger@2x.png in Resources */,
+				9E6748241E65350A000C3C45 /* ic_wlevel_caution@2x.png in Resources */,
+				9E67482D1E65350A000C3C45 /* ic_wlevel_warning@2x.png in Resources */,
+				9E7F51FF1E77DA38005DE243 /* GoogleService-Info.plist in Resources */,
+				9E7F51CF1E6E677D005DE243 /* background.png in Resources */,
+				9E6748511E65358B000C3C45 /* ic_arrow_menaik@2x.png in Resources */,
+				9E7F51E11E77983F005DE243 /* saifon-compass_pointer_1.png in Resources */,
+				9E67485C1E6535B0000C3C45 /* ic_graph.png in Resources */,
+				9E7F51F71E77C698005DE243 /* ic_saifon_pressure.png in Resources */,
+				9E67482C1E65350A000C3C45 /* ic_wlevel_warning.png in Resources */,
+				9E7F51F61E77C698005DE243 /* ic_saifon_pointer.png in Resources */,
+				9E6748801E65369F000C3C45 /* ic_tetapan@3x.png in Resources */,
+				9E6748681E6535E6000C3C45 /* saifonbahaya.png in Resources */,
+				9E67487F1E65369F000C3C45 /* ic_tetapan@2x.png in Resources */,
+				9E7F51FC1E77D391005DE243 /* compass1.png in Resources */,
+				9E6748781E65368F000C3C45 /* ic_refresh.png in Resources */,
+				9E67488A1E6536C0000C3C45 /* ic_saifon_home.png in Resources */,
+				9E6748531E65358B000C3C45 /* ic_arrow_menurun.png in Resources */,
+				9E7F51EF1E77C698005DE243 /* ic_saifon_carbonmonoxide.png in Resources */,
+				9E7F51F21E77C698005DE243 /* ic_saifon_compass.png in Resources */,
+				9E6748571E65358B000C3C45 /* ic_arrow_tiada@2x.png in Resources */,
+				9E6748581E65358B000C3C45 /* ic_arrow_tiada@3x.png in Resources */,
+				9E6748401E65356B000C3C45 /* ic_logoPolis.png in Resources */,
+				9E67486A1E6535E6000C3C45 /* saifonnormal.png in Resources */,
+				9E67483E1E65354E000C3C45 /* ic_internet_noconn.png in Resources */,
+				9E7F51F01E77C698005DE243 /* ic_saifon_cloud.png in Resources */,
+				9E6748631E6535C9000C3C45 /* ic_chart@2x.png in Resources */,
+				9E67487E1E65369F000C3C45 /* ic_tetapan.png in Resources */,
+				9E67484F1E65358B000C3C45 /* graph@3x.png in Resources */,
+				9E7F51D11E6E677D005DE243 /* cloud.png in Resources */,
+				9E6748901E6536DC000C3C45 /* saifonlogo_248.png in Resources */,
+				9E7F51D81E6E69E3005DE243 /* saifon_compass.png in Resources */,
+				9E6748701E653649000C3C45 /* exampleimg@2x.png in Resources */,
+				9E6748711E653649000C3C45 /* imagebrokenplaceholder@2x.png in Resources */,
+				9E7F51D91E6E69E3005DE243 /* saifon-compass_pointer.png in Resources */,
+				9E7F51D01E6E677D005DE243 /* carbonmonoxide.png in Resources */,
+				9E6748281E65350A000C3C45 /* ic_wlevel_danger@3x.png in Resources */,
+				9E6748251E65350A000C3C45 /* ic_wlevel_caution@3x.png in Resources */,
+				9E67482A1E65350A000C3C45 /* ic_wlevel_safe@2x.png in Resources */,
+				9E6748911E6536DC000C3C45 /* saifonlogo_348.png in Resources */,
+				B7E7F4171CFD2A8D002FB5C3 /* Assets.xcassets in Resources */,
+				9E6748521E65358B000C3C45 /* ic_arrow_menaik@3x.png in Resources */,
+				9E6748961E65371E000C3C45 /* bg1@2x.png in Resources */,
+				B7377F461D7D12FD00462128 /* Main_IPad.storyboard in Resources */,
+				9E6748291E65350A000C3C45 /* ic_wlevel_safe.png in Resources */,
+				9E6748641E6535C9000C3C45 /* ic_chart@3x.png in Resources */,
+				9E6748721E653649000C3C45 /* imagebrokenplaceholder@3x.png in Resources */,
+				B7E7F4151CFD2A8D002FB5C3 /* Main_IPhone.storyboard in Resources */,
+				9E67484D1E65358B000C3C45 /* graph.png in Resources */,
+				9E7F51D41E6E677D005DE243 /* pressure.png in Resources */,
+				9E6748861E6536AF000C3C45 /* ic_pesanan@3x.png in Resources */,
+				9E6748851E6536AF000C3C45 /* ic_pesanan@2x.png in Resources */,
+				9E67488B1E6536C0000C3C45 /* ic_saifon_home@2x.png in Resources */,
+				9E6748691E6535E6000C3C45 /* saifonjaga.png in Resources */,
+				9E7F51F91E77C698005DE243 /* ic_saifonweather_bg.png in Resources */,
+				9E7F51F41E77C698005DE243 /* ic_saifon_luminousity.png in Resources */,
+				9E7F51FD1E77D391005DE243 /* compass2.png in Resources */,
+				9E67484E1E65358B000C3C45 /* graph@2x.png in Resources */,
+				9E6748791E65368F000C3C45 /* ic_refresh@2x.png in Resources */,
+				9E67488C1E6536C0000C3C45 /* ic_saifon_home@3x.png in Resources */,
+				9E6748731E653649000C3C45 /* imageloadingplaceholder@2x.png in Resources */,
+				9E7F51F51E77C698005DE243 /* ic_saifon_pm10.png in Resources */,
+				9E6748541E65358B000C3C45 /* ic_arrow_menurun@2x.png in Resources */,
+				9E67485D1E6535B0000C3C45 /* ic_graph@2x.png in Resources */,
+				9E7F51D51E6E677D005DE243 /* rain_gauge.png in Resources */,
+				9E7F51D21E6E677D005DE243 /* luminousity.png in Resources */,
+				9E7F51D31E6E677D005DE243 /* pm10.png in Resources */,
+				9E6748391E653530000C3C45 /* ic_nextnav_white@2x.png in Resources */,
+				9E7F51F81E77C698005DE243 /* ic_saifon_rain_gauge.png in Resources */,
+				9E6748381E653530000C3C45 /* ic_nextnav_white.png in Resources */,
+				9E6748261E65350A000C3C45 /* ic_wlevel_danger.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FF33D419D0B9E3603555132 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A214715F760048C88DAA4365 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Saifon/Pods-Saifon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5F37117E0D543F5FF5692A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Saifon/Pods-Saifon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7E7F4081CFD2A8C002FB5C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B75425161DE6A10800D08F97 /* InitialNavController.swift in Sources */,
+				9E7F51DB1E6E6C23005DE243 /* ImageRotation.swift in Sources */,
+				B74BB0D91D094E8900BCB474 /* SaifonWLInfoTVCell.swift in Sources */,
+				B7EF20EC1DCAF6740003FE5A /* URLs.swift in Sources */,
+				B74BB0D51D090CBB00BCB474 /* SaifonWLInfoTVController.swift in Sources */,
+				B7E7F4121CFD2A8D002FB5C3 /* ViewController.swift in Sources */,
+				B72ADD091D361F84009A4FFF /* HPKandunganTVC.swift in Sources */,
+				B7E7F4241CFD3DD1002FB5C3 /* LoginController.swift in Sources */,
+				B72BE0331D1BC3D7003C2200 /* WebServices.swift in Sources */,
+				B72C32021D73D851003E0C84 /* SaifonErrorTVCell.swift in Sources */,
+				B74BB0DB1D09585600BCB474 /* SaifonInfoDescTVCell.swift in Sources */,
+				9E7F51DD1E700032005DE243 /* LoadingSpinner.swift in Sources */,
+				B7127C081CFECC3B00FA87F9 /* MainTabController.swift in Sources */,
+				B754251A1DE7284300D08F97 /* RLCLoadingTVCell.swift in Sources */,
+				9E67489C1E696ACE000C3C45 /* WeatherRequest.swift in Sources */,
+				B7BFE9331DC8736200BC14F2 /* RLCListGraphDetailsDisplayTVC.swift in Sources */,
+				B77AB4B01D9B7DCF00504AC0 /* CustomizedColors.swift in Sources */,
+				B73DEC051DA4DBB100C5ACD2 /* RiverListController.swift in Sources */,
+				B7E012561DE7E32300E70F56 /* SaifonLoadingTVCell.swift in Sources */,
+				B76AFDCC1D3DE6A500BF491F /* TetapanTVC.swift in Sources */,
+				B72ADD031D361F41009A4FFF /* HPDaripadaTVCell.swift in Sources */,
+				B75A36821D6C29350097B540 /* Libraries.swift in Sources */,
+				B71EC21D1DACA874008C35AA /* RLCListDetailsDisplayController.swift in Sources */,
+				B7127C041CFE8EBB00FA87F9 /* ProcessLoginController.swift in Sources */,
+				B7127C0A1CFED2AA00FA87F9 /* SaifonVController.swift in Sources */,
+				B7E7F4101CFD2A8D002FB5C3 /* AppDelegate.swift in Sources */,
+				9E7F51DF1E7138B2005DE243 /* Alert.swift in Sources */,
+				B74F0EBB1E2617A5003887E4 /* RLCRiverDetailsTVCell.swift in Sources */,
+				B748210D1D0517FF005E503D /* SaifonInfoPicVCCell.swift in Sources */,
+				B7837EAA1D1785810072FA7C /* ColorInHex.swift in Sources */,
+				B74BB0D71D090D4E00BCB474 /* SaifonInfoDetailsTVController.swift in Sources */,
+				B7127C161CFFF2C600FA87F9 /* SaifonInfoVCCell.swift in Sources */,
+				B72ADD071D361F65009A4FFF /* HPSubjekTVC.swift in Sources */,
+				9E67489A1E695C46000C3C45 /* WeatherVC.swift in Sources */,
+				B72ADD051D361F52009A4FFF /* HPKepadaTVCell.swift in Sources */,
+				B73DEC0B1DA4FFA700C5ACD2 /* RLCErrorTVC.swift in Sources */,
+				B72ADCFF1D35FF2C009A4FFF /* HantarPesananTableVC.swift in Sources */,
+				B74D33711DEC2E1700208A03 /* RLCListGraphDetailsWebDisplayTVC.swift in Sources */,
+				B7AD2ADA1D1B9B4C008E62DE /* SaifonInfoDescPicsTVCell.swift in Sources */,
+				9E67489E1E698081000C3C45 /* WeatherCell.swift in Sources */,
+				B76AFDCE1D3F622800BF491F /* TetapanTVCell.swift in Sources */,
+				B74285791D128C2000AB6916 /* SaifonWLCInfoTVCell.swift in Sources */,
+				B72C46041D9A78FB0096D9B6 /* WaterLevelLibrary.swift in Sources */,
+				B72090201DA74CD900FB4E24 /* RLCListDisplayTVC.swift in Sources */,
+				B7127C141CFEE28E00FA87F9 /* SaifonVCCell.swift in Sources */,
+				B71EC21B1DAC93DB008C35AA /* RLCListDetailsDisplayTVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B7377F441D7D12FD00462128 /* Main_IPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7377F451D7D12FD00462128 /* Base */,
+			);
+			name = Main_IPad.storyboard;
+			sourceTree = "<group>";
+		};
+		B7E7F4131CFD2A8D002FB5C3 /* Main_IPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7E7F4141CFD2A8D002FB5C3 /* Base */,
+			);
+			name = Main_IPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B7E7F4181CFD2A8D002FB5C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7E7F4191CFD2A8D002FB5C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7E7F41C1CFD2A8D002FB5C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7E7F41D1CFD2A8D002FB5C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7E7F41F1CFD2A8D002FB5C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8E18F6F8CF8A31166DB994 /* Pods-Saifon.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Saifon/Saifon.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6CSE68LD7S;
+				INFOPLIST_FILE = Saifon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ingeniworks.saifon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7E7F4201CFD2A8D002FB5C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEE5B498A7EAE3B37F43C28F /* Pods-Saifon.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Saifon/Saifon.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6CSE68LD7S;
+				INFOPLIST_FILE = Saifon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ingeniworks.saifon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7E7F4071CFD2A8C002FB5C3 /* Build configuration list for PBXProject "Saifon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E7F41C1CFD2A8D002FB5C3 /* Debug */,
+				B7E7F41D1CFD2A8D002FB5C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7E7F41E1CFD2A8D002FB5C3 /* Build configuration list for PBXNativeTarget "Saifon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E7F41F1CFD2A8D002FB5C3 /* Debug */,
+				B7E7F4201CFD2A8D002FB5C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7E7F4041CFD2A8C002FB5C3 /* Project object */;
+}
