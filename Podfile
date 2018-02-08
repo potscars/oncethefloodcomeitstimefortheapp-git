@@ -11,5 +11,6 @@ target 'Saifon' do
 	pod 'Firebase/Core'
     pod 'Firebase/Messaging'
     pod 'SDWebImage', '~>3.8'
+    pod 'Charts'
 
 end

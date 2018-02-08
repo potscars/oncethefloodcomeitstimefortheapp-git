@@ -328,7 +328,6 @@ class SaifonVController: UITableViewController {
                         print("[SaifonVCController] Arrays available more than 0 \(self.listAllArrays?.count).")
                         
                         self.listAllArrays?.add(dataArray1)
-                        
                     }
                     else{
                         
@@ -364,10 +363,10 @@ class SaifonVController: UITableViewController {
             
             print("[SaifonVCController] Status is failed?")
             
-            let errorDesc = apiData.value(forKey: "description") as! String
-            let stringRange = errorDesc.startIndex ..< errorDesc.characters.index(errorDesc.startIndex, offsetBy: 20)
+            //let errorDesc = apiData.value(forKey: "description") as! String
+            //let stringRange = errorDesc.startIndex ..< errorDesc.characters.index(errorDesc.startIndex, offsetBy: 20)
   
-            let message = "Terdapat masalah. Sila cuba sebentar lagi. (ERRCODE:\(errorDesc.substring(with: stringRange)))"
+            let message = "Terdapat masalah. Sila cuba sebentar lagi."
             self.appearOKAlert("Masalah", message: message, okBtnTitle: "OK")
             
             DispatchQueue.main.async {
@@ -392,69 +391,6 @@ class SaifonVController: UITableViewController {
             }
         }
     }
-    
-    /*func GetOverallWaterLevelData(_ amount: String)
-    {
-        print("[SaifonVCController] Getting Overall Water Level Data Feed")
-        
-        let getLoginURL = URL.init(string: URLs.kSAIFON_WATER_LEVEL_DATA_URL(amount))
-        
-        print("[SaifonVCController] Requesting GetOverallWaterLevelData...")
-        
-        let requestData = NSMutableURLRequest.init(url: getLoginURL!, cachePolicy:NSURLRequest.CachePolicy.useProtocolCachePolicy , timeoutInterval: 60.0)
-        requestData.httpMethod = "GET"
-        requestData.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        
-        print("[SaifonVCController] Initiating GetOverallWaterLevelData...")
-        
-        let getDataSession = URLSession.shared
-        var successMessage: String = ""
-        //var dataArray0: NSDictionary!
-        let getDataSessionDataTask: URLSessionDataTask = getDataSession.dataTask(with: requestData as URLRequest) { (retrievedData, response, error) -> Void in
-            
-            do {
-                
-                guard error == nil else {
-                    Alert().showAlert(self, title: "Amaran!", message: "Ralat tidak dapat berhubung dengan server..")
-                    self.removeSpinner()
-                    return
-                }
-                
-                guard let responseData = retrievedData else {
-                    Alert().showAlert(self, title: "Amaran!", message: "Gagal mendapatkan data..")
-                    
-                    return
-                }
-     
-                let getDataFromJSON = try JSONSerialization.jsonObject(with: responseData, options: []) as! NSArray
-                
-                self.overallRiverData = getDataFromJSON
-                
-                print("[SaifonVCController] Check data: ",getDataFromJSON)
-                
-                successMessage = (getDataFromJSON.object(at: 0) as AnyObject).value(forKey: "location") as! String
-                
-                print("[SaifonVCController] Success message is ",successMessage)
-                print("[SaifonVCController] Data retrieved is ",retrievedData)
-                
-                let data = getDataFromJSON.value(forKey: "receives")
-                
-                print("[SaifonVCController] Check status is", data)
-                
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "SAIFON_WL_INFO_SEGUE", sender: self)
-                }
-                
-            }
-            catch let error as NSError {
-                
-                print("[SaifonVCController] Error while retrieve login data ",error)
-            }
-        }
-        
-        getDataSessionDataTask.resume()
-
-    }*/
     
     func removeSpinner() {
         

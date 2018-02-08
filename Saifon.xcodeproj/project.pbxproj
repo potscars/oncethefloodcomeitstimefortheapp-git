@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7466D95CD876F269FB2F430D /* Pods_Saifon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74349147E402B6C9212F0CF /* Pods_Saifon.framework */; };
+		9E1BD42F2029A48A009702EB /* RiverLevelGraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1BD42E2029A489009702EB /* RiverLevelGraphCell.swift */; };
 		9E6748231E65350A000C3C45 /* ic_wlevel_caution.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748171E65350A000C3C45 /* ic_wlevel_caution.png */; };
 		9E6748241E65350A000C3C45 /* ic_wlevel_caution@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748181E65350A000C3C45 /* ic_wlevel_caution@2x.png */; };
 		9E6748251E65350A000C3C45 /* ic_wlevel_caution@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6748191E65350A000C3C45 /* ic_wlevel_caution@3x.png */; };
@@ -102,6 +103,7 @@
 		9E7F51FC1E77D391005DE243 /* compass1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51FA1E77D391005DE243 /* compass1.png */; };
 		9E7F51FD1E77D391005DE243 /* compass2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51FB1E77D391005DE243 /* compass2.png */; };
 		9E7F51FF1E77DA38005DE243 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51FE1E77DA38005DE243 /* GoogleService-Info.plist */; };
+		9EB5B616202AF8ED00CC6D0E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5B615202AF8ED00CC6D0E /* Extension.swift */; };
 		9EFCCCD81E793FEA00324ADF /* bangunanbiru.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EFCCCD71E793FEA00324ADF /* bangunanbiru.png */; };
 		B7127C041CFE8EBB00FA87F9 /* ProcessLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7127C031CFE8EBB00FA87F9 /* ProcessLoginController.swift */; };
 		B7127C081CFECC3B00FA87F9 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7127C071CFECC3B00FA87F9 /* MainTabController.swift */; };
@@ -151,6 +153,7 @@
 
 /* Begin PBXFileReference section */
 		2B8E18F6F8CF8A31166DB994 /* Pods-Saifon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saifon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Saifon/Pods-Saifon.debug.xcconfig"; sourceTree = "<group>"; };
+		9E1BD42E2029A489009702EB /* RiverLevelGraphCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverLevelGraphCell.swift; sourceTree = "<group>"; };
 		9E6748171E65350A000C3C45 /* ic_wlevel_caution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wlevel_caution.png; sourceTree = "<group>"; };
 		9E6748181E65350A000C3C45 /* ic_wlevel_caution@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_caution@2x.png"; sourceTree = "<group>"; };
 		9E6748191E65350A000C3C45 /* ic_wlevel_caution@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wlevel_caution@3x.png"; sourceTree = "<group>"; };
@@ -245,6 +248,7 @@
 		9E7F51FA1E77D391005DE243 /* compass1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass1.png; sourceTree = "<group>"; };
 		9E7F51FB1E77D391005DE243 /* compass2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass2.png; sourceTree = "<group>"; };
 		9E7F51FE1E77DA38005DE243 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9EB5B615202AF8ED00CC6D0E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9EFCCCD71E793FEA00324ADF /* bangunanbiru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bangunanbiru.png; sourceTree = "<group>"; };
 		A74349147E402B6C9212F0CF /* Pods_Saifon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saifon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE5B498A7EAE3B37F43C28F /* Pods-Saifon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saifon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Saifon/Pods-Saifon.release.xcconfig"; sourceTree = "<group>"; };
@@ -449,6 +453,7 @@
 				B75425191DE7284300D08F97 /* RLCLoadingTVCell.swift */,
 				B74D33701DEC2E1700208A03 /* RLCListGraphDetailsWebDisplayTVC.swift */,
 				B74F0EBA1E2617A5003887E4 /* RLCRiverDetailsTVCell.swift */,
+				9E1BD42E2029A489009702EB /* RiverLevelGraphCell.swift */,
 			);
 			name = RiverListController;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				9E7F51DA1E6E6C23005DE243 /* ImageRotation.swift */,
 				9E7F51DC1E700032005DE243 /* LoadingSpinner.swift */,
 				9E7F51DE1E7138B2005DE243 /* Alert.swift */,
+				9EB5B615202AF8ED00CC6D0E /* Extension.swift */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -829,13 +835,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Saifon-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A214715F760048C88DAA4365 /* [CP] Embed Pods Frameworks */ = {
@@ -844,9 +853,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Saifon/Pods-Saifon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BEMSimpleLineGraph/BEMSimpleLineGraph.framework",
+				"${BUILT_PRODUCTS_DIR}/Bugsnag/Bugsnag.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/EAIntroView/EAIntroView.framework",
+				"${BUILT_PRODUCTS_DIR}/EARestrictedScrollView/EARestrictedScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMSimpleLineGraph.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bugsnag.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EAIntroView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EARestrictedScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -875,6 +905,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1BD42F2029A48A009702EB /* RiverLevelGraphCell.swift in Sources */,
 				B75425161DE6A10800D08F97 /* InitialNavController.swift in Sources */,
 				9E7F51DB1E6E6C23005DE243 /* ImageRotation.swift in Sources */,
 				B74BB0D91D094E8900BCB474 /* SaifonWLInfoTVCell.swift in Sources */,
@@ -913,6 +944,7 @@
 				B73DEC0B1DA4FFA700C5ACD2 /* RLCErrorTVC.swift in Sources */,
 				B72ADCFF1D35FF2C009A4FFF /* HantarPesananTableVC.swift in Sources */,
 				B74D33711DEC2E1700208A03 /* RLCListGraphDetailsWebDisplayTVC.swift in Sources */,
+				9EB5B616202AF8ED00CC6D0E /* Extension.swift in Sources */,
 				B7AD2ADA1D1B9B4C008E62DE /* SaifonInfoDescPicsTVCell.swift in Sources */,
 				9E67489E1E698081000C3C45 /* WeatherCell.swift in Sources */,
 				B76AFDCE1D3F622800BF491F /* TetapanTVCell.swift in Sources */,
@@ -1046,7 +1078,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B8E18F6F8CF8A31166DB994 /* Pods-Saifon.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Saifon/Saifon.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1066,7 +1097,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AEE5B498A7EAE3B37F43C28F /* Pods-Saifon.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Saifon/Saifon.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

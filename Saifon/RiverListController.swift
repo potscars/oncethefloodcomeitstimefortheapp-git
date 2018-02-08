@@ -9,6 +9,10 @@
 import UIKit
 import MBProgressHUD
 
+struct RiverIdentifier {
+    static let RiverLevelGraphCellIdentifier = "riverGraphCellIdentifier"
+}
+
 class RiverListController: UITableViewController, MBProgressHUDDelegate {
 
     var listOfRivers: NSMutableArray? = []
@@ -17,6 +21,7 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
     var allRiverData: NSMutableArray = []
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var receivedID: String = ""
+    var listTotalAmount = "20"
     
     var isFirstLoad = true
     var loadingSpinner: LoadingSpinner!
@@ -73,7 +78,7 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
             self.loadingSpinner.setLoadingScreen()
             
             DispatchQueue.global(qos: qualityOfServiceClass).async(execute: {
-                self.GetOverallWaterLevelData(dataAmount: "10")
+                self.GetOverallWaterLevelData(dataAmount: self.listTotalAmount)
             })
             
         } else {
@@ -88,7 +93,7 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
         if(Libraries().CheckInternetConnection(self) == true)
         {
             
-            GetOverallWaterLevelData(dataAmount: "10")
+            GetOverallWaterLevelData(dataAmount: listTotalAmount)
         } else {
             
             let errorData = ["ERR_CODE":"NO_INTERNET_CONNECTION"]
@@ -100,6 +105,7 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
     {
         listOfRivers!.removeAllObjects()
         allRiverData.removeAllObjects()
+        receivedListofRivers.removeAllObjects()
         
         print("[WebServices] Getting Overall Water Level Data Feed")
         
@@ -328,9 +334,14 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
             
             let listDetailsController: RLCListDetailsDisplayController = segue.destination as! RLCListDetailsDisplayController
             
-            listDetailsController.detailsOfRiver.add(selectedRiverDetails)
-            listDetailsController.detailsOfRiver.add(receivedListofRivers)
-            listDetailsController.detailsOfRiver.add(receivedID)
+            let tempArray: NSMutableArray = []
+            tempArray.add(selectedRiverDetails)
+            tempArray.add(receivedListofRivers)
+            tempArray.add(receivedID)
+            
+            print("Count tempArray: ", tempArray.count)
+            
+            listDetailsController.detailsOfRiver = tempArray
         }
     }
 }

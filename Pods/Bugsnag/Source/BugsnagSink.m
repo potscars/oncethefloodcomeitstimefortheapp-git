@@ -24,64 +24,44 @@
 // THE SOFTWARE.
 //
 
-#import <KSCrash/KSCrash.h>
 #import "BugsnagSink.h"
-#import "BugsnagNotifier.h"
 #import "Bugsnag.h"
-#import "BugsnagCrashReport.h"
 #import "BugsnagCollections.h"
-#import "BugsnagLogger.h"
+#import "BugsnagNotifier.h"
+#import "BugsnagKeys.h"
 
 // This is private in Bugsnag, but really we want package private so define
 // it here.
 @interface Bugsnag ()
-+ (BugsnagNotifier*)notifier;
-@end
-
-@interface BugsnagSink ()
-@property (nonatomic, strong) NSOperationQueue *sendQueue;
-@end
-
-@interface BSGDelayOperation : NSOperation
-@end
-
-@interface BSGDeliveryOperation : NSOperation
++ (BugsnagNotifier *)notifier;
 @end
 
 @implementation BugsnagSink
 
-- (instancetype)init {
+- (instancetype)initWithApiClient:(BugsnagErrorReportApiClient *)apiClient {
     if (self = [super init]) {
-        _sendQueue = [[NSOperationQueue alloc] init];
-        _sendQueue.maxConcurrentOperationCount = 1;
-        if ([_sendQueue respondsToSelector:@selector(qualityOfService)])
-            _sendQueue.qualityOfService = NSQualityOfServiceUtility;
-        _sendQueue.name = @"Bugsnag Delivery Queue";
+        self.apiClient = apiClient;
     }
     return self;
 }
 
-- (void)sendPendingReports {
-    [self.sendQueue cancelAllOperations];
-    BSGDelayOperation *delay = [BSGDelayOperation new];
-    BSGDeliveryOperation *deliver = [BSGDeliveryOperation new];
-    [deliver addDependency:delay];
-    [self.sendQueue addOperations:@[delay, deliver] waitUntilFinished:NO];
-}
-
-// Entry point called by KSCrash when a report needs to be sent. Handles report filtering based on the configuration
-// options for `notifyReleaseStages`.
-// Removes all reports not meeting at least one of the following conditions:
-// - the report-specific config specifies the `notifyReleaseStages` property and it contains the current stage
+// Entry point called by BSG_KSCrash when a report needs to be sent. Handles
+// report filtering based on the configuration options for
+// `notifyReleaseStages`. Removes all reports not meeting at least one of the
+// following conditions:
+// - the report-specific config specifies the `notifyReleaseStages` property and
+// it contains the current stage
 // - the report-specific and global `notifyReleaseStages` properties are unset
-// - the report-specific `notifyReleaseStages` property is unset and the global `notifyReleaseStages` property
+// - the report-specific `notifyReleaseStages` property is unset and the global
+// `notifyReleaseStages` property
 //   and it contains the current stage
-- (void)filterReports:(NSArray*) reports
-         onCompletion:(KSCrashReportFilterCompletion) onCompletion {
+- (void)filterReports:(NSArray *)reports
+         onCompletion:(BSG_KSCrashReportFilterCompletion)onCompletion {
     NSMutableArray *bugsnagReports = [NSMutableArray new];
     BugsnagConfiguration *configuration = [Bugsnag configuration];
-    for (NSDictionary* report in reports) {
-        BugsnagCrashReport *bugsnagReport = [[BugsnagCrashReport alloc] initWithKSReport:report];
+    for (NSDictionary *report in reports) {
+        BugsnagCrashReport *bugsnagReport =
+                [[BugsnagCrashReport alloc] initWithKSReport:report];
         if (![bugsnagReport shouldBeSent])
             continue;
         BOOL shouldSend = YES;
@@ -90,14 +70,14 @@
             if (!shouldSend)
                 break;
         }
-        if(shouldSend) {
+        if (shouldSend) {
             [bugsnagReports addObject:bugsnagReport];
         }
     }
-    
+
     if (bugsnagReports.count == 0) {
         if (onCompletion) {
-            onCompletion(reports, YES, nil);
+            onCompletion(bugsnagReports, YES, nil);
         }
         return;
     }
@@ -122,111 +102,29 @@
         return;
     }
 
-    [self sendReports:bugsnagReports
-              payload:reportData
-                toURL:configuration.notifyURL
-         onCompletion:onCompletion];
+    [self.apiClient sendData:bugsnagReports
+                 withPayload:reportData
+                       toURL:configuration.notifyURL
+            headers:[configuration errorApiHeaders]
+                onCompletion:onCompletion];
 }
 
-- (void)sendReports:(NSArray <BugsnagCrashReport *>*)reports
-            payload:(NSDictionary *)reportData
-              toURL:(NSURL *)url
-       onCompletion:(KSCrashReportFilterCompletion) onCompletion {
-    @try {
-        NSError *error = nil;
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:reportData
-                                                           options:NSJSONWritingPrettyPrinted
-                                                             error:&error];
-
-        if (jsonData == nil) {
-            if (onCompletion) {
-                onCompletion(reports, NO, error);
-            }
-            return;
-        }
-        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url
-                                                               cachePolicy: NSURLRequestReloadIgnoringLocalCacheData
-                                                           timeoutInterval: 15];
-        request.HTTPMethod = @"POST";
-
-
-        if ([NSURLSession class]) {
-            NSURLSession *session = [Bugsnag configuration].session;
-            if (!session) {
-                session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-            }
-            NSURLSessionTask *task = [session uploadTaskWithRequest:request fromData:jsonData completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                if (onCompletion)
-                    onCompletion(reports, error == nil, error);
-            }];
-            [task resume];
-        } else {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-            NSURLResponse *response = nil;
-            request.HTTPBody = jsonData;
-            [NSURLConnection sendSynchronousRequest:request
-                                  returningResponse:&response
-                                              error:&error];
-            if (onCompletion) {
-                onCompletion(reports, error == nil, error);
-            }
-#pragma clang diagnostic pop
-        }
-    } @catch (NSException *exception) {
-        if (onCompletion) {
-            onCompletion(reports, NO, [NSError errorWithDomain:exception.reason
-                                                          code:420
-                                                      userInfo:@{@"exception": exception}]);
-        }
-    }
-}
 
 // Generates the payload for notifying Bugsnag
-- (NSDictionary*) getBodyFromReports:(NSArray*) reports {
-    NSMutableDictionary* data = [[NSMutableDictionary alloc] init];
-    BSGDictSetSafeObject(data, [Bugsnag configuration].apiKey, @"apiKey");
-    BSGDictSetSafeObject(data, [Bugsnag notifier].details, @"notifier");
-    
-    NSMutableArray* formatted = [[NSMutableArray alloc] initWithCapacity:[reports count]];
-    
-    for (BugsnagCrashReport* report in reports) {
-        BSGArrayAddSafeObject(formatted, [report serializableValueWithTopLevelData:data]);
+- (NSDictionary *)getBodyFromReports:(NSArray *)reports {
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
+    BSGDictSetSafeObject(data, [Bugsnag notifier].details, BSGKeyNotifier);
+    BSGDictSetSafeObject(data, [Bugsnag notifier].configuration.apiKey, BSGKeyApiKey);
+
+    NSMutableArray *formatted =
+            [[NSMutableArray alloc] initWithCapacity:[reports count]];
+
+    for (BugsnagCrashReport *report in reports) {
+        BSGArrayAddSafeObject(formatted, [report toJson]);
     }
 
-    BSGDictSetSafeObject(data, formatted, @"events");
-    
+    BSGDictSetSafeObject(data, formatted, BSGKeyEvents);
     return data;
-}
-
-@end
-
-@implementation BSGDelayOperation
-const NSTimeInterval BSG_SEND_DELAY_SECS = 1;
-
-- (void)main {
-    [NSThread sleepForTimeInterval:BSG_SEND_DELAY_SECS];
-}
-
-@end
-
-@implementation BSGDeliveryOperation
-
--(void)main {
-    @autoreleasepool {
-        @try {
-            [[KSCrash sharedInstance] sendAllReportsWithCompletion:^(NSArray *filteredReports, BOOL completed, NSError *error) {
-                if (error) {
-                    bsg_log_warn(@"Failed to send reports: %@", error);
-                } else if (filteredReports.count > 0) {
-                    bsg_log_info(@"Reports sent.");
-                }
-            }];
-        }
-        @catch (NSException* e) {
-            bsg_log_err(@"Could not send report: %@", e);
-        }
-    }
 }
 
 @end

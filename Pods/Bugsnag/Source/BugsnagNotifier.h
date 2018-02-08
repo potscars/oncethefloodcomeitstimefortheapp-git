@@ -29,6 +29,8 @@
 #import "BugsnagConfiguration.h"
 #import "BugsnagMetaData.h"
 
+@class BSGConnectivity;
+
 @interface BugsnagNotifier : NSObject <BugsnagMetaDataDelegate>
 
 @property(nonatomic, readwrite, retain)
@@ -37,29 +39,47 @@
 @property(nonatomic, readwrite, retain) NSDictionary *_Nonnull details;
 @property(nonatomic, readwrite, retain) NSLock *_Nonnull metaDataLock;
 
+@property(nonatomic) BSGConnectivity *_Nonnull networkReachable;
+
 - (instancetype _Nonnull)initWithConfiguration:
     (BugsnagConfiguration *_Nonnull)configuration;
 - (void)start;
 
-/**
- *  Notify Bugsnag of an error
- *
- *  @param errorName Name or class of the error
- *  @param message  Message of or reason for the error
- *  @param block    Configuration block with information for this report
- */
-- (void)notify:(NSString *_Nonnull)errorName
-       message:(NSString *_Nonnull)message
-         block:(BugsnagNotifyBlock _Nullable)block;
+- (void)startSession;
 
 /**
  *  Notify Bugsnag of an exception
  *
  *  @param exception the exception
- *  @param block     Configuration block for adding additional report information
+ *  @param block     Configuration block for adding additional report
+ * information
  */
 - (void)notifyException:(NSException *_Nonnull)exception
                   block:(BugsnagNotifyBlock _Nullable)block;
+
+/**
+ *  Notify Bugsnag of an exception
+ *
+ *  @param exception the exception
+ *  @param severity  the severity
+ *  @param block     Configuration block for adding additional report
+ * information
+ */
+- (void)notifyException:(NSException *_Nonnull)exception
+             atSeverity:(BSGSeverity)severity
+                  block:(BugsnagNotifyBlock _Nullable)block;
+
+/**
+ *  Notify Bugsnag of an exception. Only intended for React Native/Unity use.
+ *
+ *  @param exception the exception
+ *  @param metaData  the metadata
+ *  @param block     Configuration block for adding additional report
+ * information
+ */
+- (void)internalClientNotify:(NSException *_Nonnull)exception
+                    withData:(NSDictionary *_Nullable)metaData
+                       block:(BugsnagNotifyBlock _Nullable)block;
 
 /**
  *  Notify Bugsnag of an error
@@ -75,7 +95,8 @@
  *
  *  @param block configuration block
  */
-- (void)addBreadcrumbWithBlock:(void(^ _Nonnull)(BugsnagBreadcrumb *_Nonnull))block;
+- (void)addBreadcrumbWithBlock:
+    (void (^_Nonnull)(BugsnagBreadcrumb *_Nonnull))block;
 
 /**
  * Clear all stored breadcrumbs.
@@ -93,4 +114,5 @@
  *  Enable or disable automatic breadcrumb collection based on configuration
  */
 - (void)updateAutomaticBreadcrumbDetectionSettings;
+
 @end

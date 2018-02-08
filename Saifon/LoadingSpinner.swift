@@ -13,6 +13,7 @@ class LoadingSpinner {
     
     //MARK: - Variables for setting up loading spinner.
     let loadingView = UIView()
+    let transparencyView = UIView()
     let spinner = UIActivityIndicatorView()
     let loadingLabel = UILabel()
     
@@ -38,6 +39,10 @@ class LoadingSpinner {
            y = (self.view.bounds.height / 2) - (height / 2)
         }
         
+        transparencyView.frame = view.frame
+        transparencyView.alpha = 0.3
+        transparencyView.backgroundColor = .black
+        
         loadingView.frame = CGRect(x: x, y: y, width: width, height: height)
         loadingView.backgroundColor = UIColor.black
         loadingView.layer.cornerRadius = 5
@@ -60,6 +65,7 @@ class LoadingSpinner {
         loadingView.addSubview(self.spinner)
         loadingView.addSubview(self.loadingLabel)
         
+        self.view.addSubview(transparencyView)
         self.view.addSubview(loadingView)
         
     }
@@ -69,6 +75,7 @@ class LoadingSpinner {
         
         // Hides and stops the text and the spinner
         self.spinner.stopAnimating()
+        self.transparencyView.removeFromSuperview()
         self.loadingView.removeFromSuperview()
     }
 }

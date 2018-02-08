@@ -24,14 +24,15 @@
 // THE SOFTWARE.
 //
 
+#import "BSG_KSCrash.h"
+#import "BSG_KSCrashReportFilter.h"
 #import <Foundation/Foundation.h>
-#import <KSCrash/KSCrashReportFilter.h>
 
-@interface BugsnagSink : NSObject <KSCrashReportFilter>
+#import "BugsnagErrorReportApiClient.h"
 
+@interface BugsnagSink : NSObject <BSG_KSCrashReportFilter>
 
-/**
- * Send outstanding error reports
- */
-- (void)sendPendingReports;
+- (instancetype)initWithApiClient:(BugsnagErrorReportApiClient *)apiClient;
+@property(nonatomic) BugsnagErrorReportApiClient *apiClient;
+
 @end

@@ -113,7 +113,8 @@ static NSString *_Nonnull const BugsnagSeverityInfo = @"info";
  */
 + (void)notify:(NSException *_Nonnull)exception
       withData:(NSDictionary *_Nullable)metaData
-    __deprecated_msg("Use notify:block: instead and add the metadata to the report directly.");
+    __deprecated_msg("Use notify:block: instead and add the metadata to the "
+                     "report directly.");
 
 /** Send a custom or caught exception to Bugsnag.
  *
@@ -130,7 +131,16 @@ static NSString *_Nonnull const BugsnagSeverityInfo = @"info";
 + (void)notify:(NSException *_Nonnull)exception
       withData:(NSDictionary *_Nullable)metaData
     atSeverity:(NSString *_Nullable)severity
-    __deprecated_msg("Use notify:block: instead and add the metadata and severity to the report directly.");
+    __deprecated_msg("Use notify:block: instead and add the metadata and "
+                     "severity to the report directly.");
+
+/**
+ * Intended for use by other clients (React Native/Unity). Calling this method
+ * directly from iOS is not supported.
+ */
++ (void)internalClientNotify:(NSException *_Nonnull)exception
+                    withData:(NSDictionary *_Nullable)metaData
+                       block:(BugsnagNotifyBlock _Nullable)block;
 
 /** Add custom data to send to Bugsnag with every exception. If value is nil,
  *  delete the current value for attributeName
@@ -167,7 +177,8 @@ static NSString *_Nonnull const BugsnagSeverityInfo = @"info";
  *
  *  @param block configuration block
  */
-+ (void)leaveBreadcrumbWithBlock:(void(^ _Nonnull)(BugsnagBreadcrumb *_Nonnull))block;
++ (void)leaveBreadcrumbWithBlock:
+    (void (^_Nonnull)(BugsnagBreadcrumb *_Nonnull))block;
 
 /**
  *  Leave a "breadcrumb" log message each time a notification with a provided
@@ -192,5 +203,21 @@ static NSString *_Nonnull const BugsnagSeverityInfo = @"info";
 + (void)clearBreadcrumbs;
 
 + (NSDateFormatter *_Nonnull)payloadDateFormatter;
+
++ (void)setSuspendThreadsForUserReported:(BOOL)suspendThreadsForUserReported;
++ (void)setReportWhenDebuggerIsAttached:(BOOL)reportWhenDebuggerIsAttached;
++ (void)setThreadTracingEnabled:(BOOL)threadTracingEnabled;
++ (void)setWriteBinaryImagesForUserReported:
+    (BOOL)writeBinaryImagesForUserReported;
+
+/**
+ * Manually starts tracking a new session.
+ *
+ * Sessions automatically start when the application enters the foreground state, and end when the application exits
+ * the foreground.If you wish to manually start sessions, simply call this method from the relevant part of your
+ * application. Starting a new session will automatically end the previous one.
+ */
+
++ (void)startSession;
 
 @end
