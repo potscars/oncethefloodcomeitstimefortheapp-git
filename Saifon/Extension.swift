@@ -23,3 +23,30 @@ extension UIColor {
     static let lightBlue = UIColor.init(red: 93/255, green: 173/255, blue: 226/255, alpha: 1)
 }
 
+extension UINavigationController {
+    
+    func initLargeTitles() {
+        if #available(iOS 11.0, *) {
+            self.navigationBar.prefersLargeTitles = true
+            self.navigationItem.largeTitleDisplayMode = .automatic
+            self.navigationBar.largeTitleTextAttributes = [NSForegroundColorAttributeName : UIColor.red]
+        } else {
+            // Fallback on earlier versions
+        }
+        
+    }
+    
+    func deinitLargeTitles() {
+        if #available(iOS 11.0, *) {
+            self.navigationBar.prefersLargeTitles = false
+            self.navigationItem.largeTitleDisplayMode = .never
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+}
+
+
+
+
+

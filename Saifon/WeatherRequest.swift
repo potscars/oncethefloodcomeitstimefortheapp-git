@@ -13,7 +13,7 @@ class WeatherRequest {
     
     var viewController: UIViewController!
     
-    func weatherRequest(_ viewController: UIViewController?, completion: @escaping ([Weather]) -> ()) {
+    func weatherRequest(_ viewController: UIViewController?, completion: @escaping ([Weather]?) -> ()) {
         
         self.viewController = viewController
         var weatherList = [Weather]()
@@ -38,8 +38,12 @@ class WeatherRequest {
                 print("No data in return")
                 return
             }
+            guard let tempWeatherData = self.fetchJSONData(responseData, response: response) else {
+                completion(nil)
+                return
+            }
             
-            weatherList = self.fetchJSONData(responseData, response: response)!
+            weatherList = tempWeatherData
             
             completion(weatherList)
         }) 
@@ -108,7 +112,7 @@ class WeatherRequest {
                 
             } else {
                 
-                //Out of range
+                print(response)
             }
             
         } catch let error{

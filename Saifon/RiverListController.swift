@@ -42,6 +42,7 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 140.0
+        tableView.register(PlaceHolderCell.self, forCellReuseIdentifier: "PlaceholderCell")
         edgesForExtendedLayout = UIRectEdge()
         
         loadingSpinner = LoadingSpinner.init(view: self.view, isNavBar: true)
@@ -70,17 +71,21 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.navigationController?.initLargeTitles()
+        
         if(Libraries().CheckInternetConnection(self) == true)
         {
             let qualityOfServiceClass = DispatchQoS.QoSClass.background
-            
-            self.isFirstLoad = true
-            self.loadingSpinner.setLoadingScreen()
-            
-            DispatchQueue.global(qos: qualityOfServiceClass).async(execute: {
-                self.GetOverallWaterLevelData(dataAmount: self.listTotalAmount)
-            })
-            
+
+            if (listOfRivers?.count)! <= 0 {
+                
+                self.isFirstLoad = true
+                self.loadingSpinner.setLoadingScreen()
+                
+                DispatchQueue.global(qos: qualityOfServiceClass).async(execute: {
+                    self.GetOverallWaterLevelData(dataAmount: self.listTotalAmount)
+                })
+            }
         } else {
             
             let errorData = ["ERR_CODE":"NO_INTERNET_CONNECTION"]
@@ -191,9 +196,11 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
             //Caution, danger, depth, latitude, longitude
             
             let readReceiveData: NSMutableArray = (allRiverData[iARD] as AnyObject).value(forKey: "receives") as! NSMutableArray
-            
+            let isSensorActivated = (allRiverData[iARD] as AnyObject).value(forKey: "is_active") as! String
+            let isMaintenance = (allRiverData[iARD] as AnyObject).value(forKey: "is_maintenance") as! String
             riverName = (allRiverData[iARD] as AnyObject).value(forKey: "location") as! String
             riverCurrentReportDate = (readReceiveData[0] as AnyObject).value(forKey: "date_receive") as! String
+            
             
             if let currentReportWaterLevel = (readReceiveData[0] as AnyObject).value(forKey: "water_depth") as? String {
                 riverCurrentReportWaterLevel = currentReportWaterLevel
@@ -216,7 +223,9 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
                                            "RIVER_CURRENT_LEVEL":"\(riverCurrentReportWaterLevel)m",
                 "RIVER_DIFFERENCE":Libraries.waterLevelConvert(riverWaterLevelDifference),
                 "RIVER_PREVIOUS_LEVEL":"\(riverPrevReportWaterLevel)m",
-                "ERR_CODE":"OKAY"]
+                "ERR_CODE":"OKAY",
+                "IS_ACTIVE": "\(isSensorActivated)",
+                "IS_MAINTENANCE": isMaintenance]
             
             listOfRivers!.add(riverInfo)
             receivedListofRivers.add(readReceiveData)
@@ -286,13 +295,24 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
             
             if connectionStatus == "OKAY" {
                 
-                let cell: RLCRiverDetailsTVCell = tableView.dequeueReusableCell(withIdentifier: "RiverDetailedTwoCellID") as! RLCRiverDetailsTVCell
+                let tempData = listOfRivers?.object(at: indexPath.row) as! NSDictionary
                 
-                cell.updateCell(listOfRivers![indexPath.row] as! NSDictionary)
-                
-                tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
-                
-                return cell
+                if (tempData["IS_ACTIVE"] as! String ) == "1" && (tempData["IS_MAINTENANCE"] as! String ) == "2" {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "RiverDetailedTwoCellID") as! RLCRiverDetailsTVCell
+                    
+                    cell.updateCell(listOfRivers?.object(at: indexPath.row) as!
+                        NSDictionary)
+                    tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+                    
+                    return cell
+                } else {
+                    
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceholderCell", for: indexPath) as! PlaceHolderCell
+                    
+                    cell.updateUI(withName: tempData["RIVER_NAME"] as! String)
+                    
+                    return cell
+                }
             } else if connectionStatus == "NO_INTERNET_CONNECTION" {
                 
                 let cellError = tableView.dequeueReusableCell(withIdentifier: "ErrorLoadingRiverReuseIdentifier") as! RLCErrorTVC
@@ -314,13 +334,34 @@ class RiverListController: UITableViewController, MBProgressHUDDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let receivedIdArray: NSArray = receivedListofRivers.value(forKey: "location_id") as! NSArray
-        let getID: String = (receivedIdArray[indexPath.row] as AnyObject).object(at: 0) as! String
+        let tempData = listOfRivers?.object(at: indexPath.row) as! NSDictionary
         
-        selectedRiverDetails = listOfRivers![indexPath.row] as! NSDictionary
-        receivedID = getID
+        if (tempData["IS_ACTIVE"] as! String ) == "1" && (tempData["IS_MAINTENANCE"] as! String ) == "2" {
+            let receivedIdArray: NSArray = receivedListofRivers.value(forKey: "location_id") as! NSArray
+            let getID: String = (receivedIdArray[indexPath.row] as AnyObject).object(at: 0) as! String
+            
+            selectedRiverDetails = listOfRivers![indexPath.row] as! NSDictionary
+            receivedID = getID
+            
+            performSegue(withIdentifier: "RIVER_FULL_DETAILS_SEGUE", sender: self)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        performSegue(withIdentifier: "RIVER_FULL_DETAILS_SEGUE", sender: self)
+        if(listOfRivers!.count == 0) {
+            return 100
+            
+        } else {
+            
+            let tempData = listOfRivers?.object(at: indexPath.row) as! NSDictionary
+            
+            if (tempData["IS_ACTIVE"] as! String ) == "1" &&  (tempData["IS_MAINTENANCE"] as! String ) == "2"{
+                return UITableViewAutomaticDimension
+            } else {
+                return 140.0
+            }
+        }
     }
     
     // MARK: - Navigation

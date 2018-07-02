@@ -17,4 +17,5 @@ class URLs: NSObject {
     static func kSAIFON_WATER_LEVEL_DATA_URL(_ amount:String) -> String { return "\(kSAIFON_API_URL())/water-level-data?amount=\(amount)" }
     static func kSAIFON_WATER_GRAPH_URL(_ location_id: String) -> String { return "\(kSAIFON_API_URL())/water-level-data-bylocation?location_id=\(location_id)" }
     static func kSAIFON_LATEST_SENSOR() -> String { return "\(kSAIFON_API_URL())/libelium/latest-data" }
+    static let saifonFeedsURL = "\(kSAIFON_API_URL())/feed"
 }

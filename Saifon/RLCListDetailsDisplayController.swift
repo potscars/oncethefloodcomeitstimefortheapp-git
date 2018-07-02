@@ -32,6 +32,8 @@ class RLCListDetailsDisplayController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 140.0
         self.edgesForExtendedLayout = UIRectEdge()
+        
+        self.navigationController?.deinitLargeTitles()
     }
     
     func setupGraphData() {

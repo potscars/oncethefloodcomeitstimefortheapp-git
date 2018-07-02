@@ -75,6 +75,7 @@ class TetapanTVC: UITableViewController, UITextViewDelegate, UITextFieldDelegate
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.navigationController?.initLargeTitles()
         if(Libraries().CheckInternetConnection(self) == true)
         {
             let qualityOfServiceClass = DispatchQoS.QoSClass.background

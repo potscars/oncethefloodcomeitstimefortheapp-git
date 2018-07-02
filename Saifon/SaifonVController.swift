@@ -182,12 +182,21 @@ class SaifonVController: UITableViewController {
         
         print("[SaifonVCController] Getting Water Level Data Feed")
         
-        let getLoginURL = URL.init(string: URLs.kSAIFON_LANDING_PAGE_URL())
+        let getLoginURL = URL.init(string: URLs.saifonFeedsURL)
         
         print("[SaifonVCController] Requesting FeedWaterLevelData...")
         
+        let params = ["paginate": 30]
+        
         let requestData = NSMutableURLRequest.init(url: getLoginURL!, cachePolicy:NSURLRequest.CachePolicy.useProtocolCachePolicy , timeoutInterval: 60.0)
-        requestData.httpMethod = "GET"
+        requestData.httpMethod = "POST"
+        
+        do {
+            requestData.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        } catch let err {
+            print(err.localizedDescription)
+        }
+        
         requestData.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         
         print("[SaifonVCController] Initiating session...")
@@ -251,48 +260,31 @@ class SaifonVController: UITableViewController {
         
         print("[SaifonVCController] Getting Water Level Data Feed")
         
-        let status = apiData.value(forKey: "status") as! String
+        let status = apiData.value(forKey: "status") as! Int
         
         print("[SaifonVCController] Check status is", status)
         
-        if(status == "succesful")
+        if(status == 1)
         {
             print("[SaifonVCController] Data retrieval is successful")
             
-            let data = apiData.value(forKey: "data") as! NSDictionary
-            print("[SaifonVCController] Check status is", data)
+            let feeds = apiData.value(forKey: "data") as! NSArray
+            print("[SaifonVCController] Check status is", feeds)
             
-            let feeds = data.value(forKey: "feeds") as? NSArray
             let finalFeeds = (feeds != nil) ? feeds : []
             print("[SaifonVCController] Check feedsOnData is", finalFeeds)
-            
-            let dataArray0: NSDictionary = [
-                "SET_TABLECELL":"RIVER_STATUS",
-                "RIVER_NAME":(data.value(forKey: "location") as? String)!,
-                "RIVER_REPORT_DATE":(data.value(forKey: "date_sent") as? String)!,
-                "RIVER_DIFFERENCE_DIRECTION":data.value(forKey: "different_type")! as AnyObject,
-                "RIVER_LEVEL_PREVIOUS":Libraries.checkIfStringOrInt(data.value(forKey: "different")! as AnyObject),
-                "RIVER_LEVEL_DIFFERENCE":(data.value(forKey: "interval_different") as? String)!,
-                "RIVER_CURR_LEVEL":(data.value(forKey: "waterDeep") as? String)!,
-                "RIVER_LEVEL_PHASE":(data.value(forKey: "level_phase") as? Int)!,
-                "RIVER_LEVEL_STATUS":(data.value(forKey: "level_status") as? String)!
-            ]
-            
-            //print("[SaifonVCController] Data Array is ", dataArray0)
-            
-            //self.listAllArrays = [dataArray0]
 
-            if(feeds != nil)
+            if(feeds.count > 0)
             {
                 print("[SaifonVCController] Place feeds in array with content: \(feeds)...")
                 
-                let dateSender: NSArray = feeds!.value(forKey: "updated_at") as! NSArray
-                let mainDesc: NSArray = feeds!.value(forKey: "content") as! NSArray
-                let imagesList: NSArray = feeds!.value(forKey: "images") as! NSArray
-                let userProfile: NSArray = feeds!.value(forKey: "user_profile") as! NSArray
-                let user: NSArray = feeds!.value(forKey: "user") as! NSArray
+                let dateSender: NSArray = feeds.value(forKey: "updated_at") as! NSArray
+                let mainDesc: NSArray = feeds.value(forKey: "content") as! NSArray
+                let imagesList: NSArray = feeds.value(forKey: "images") as! NSArray
+                let userProfile: NSArray = feeds.value(forKey: "user_profile") as! NSArray
+                let user: NSArray = feeds.value(forKey: "user") as! NSArray
                 
-                for i in 0...feeds!.count - 1
+                for i in 0...feeds.count - 1
                 {
                     let tempArray: NSDictionary = [
                         "IMAGE_DOMAIN_URL":((imagesList[i] as AnyObject).value(forKey: "large")! as AnyObject).value(forKey: "domain")! as! NSArray,
@@ -304,8 +296,7 @@ class SaifonVController: UITableViewController {
                         "IMAGE_ICON_URLS":((userProfile[i] as AnyObject).value(forKey: "thumbnail")! as AnyObject).value(forKey: "full_path") as! String
                         
                     ]
-                    //print("[SaifonVCController] Image inserted: \(tempArray[0])")
-                    
+                   
                     let mainDescString = mainDesc[i] as! String
                     let start = mainDescString.index(mainDescString.startIndex, offsetBy: 0)
                     let end = mainDescString.index(mainDescString.startIndex, offsetBy: mainDescString.characters.count > 100 ? 100 : mainDescString.characters.count)

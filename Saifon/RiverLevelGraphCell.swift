@@ -46,9 +46,10 @@ class RiverLevelGraphCell: UITableViewCell {
     func updateGraphUI(waterDepthValues: [Double]) {
         
         let count  = waterDepthValues.count
+        let reversedWaterDepth: [Double] = waterDepthValues.reversed()
         
         let yVals2 = (0..<count).map { (i) -> ChartDataEntry in
-            let val = waterDepthValues[i]
+            let val = reversedWaterDepth[i]
             print(val)
             return ChartDataEntry(x: Double(i), y: val)
         }
@@ -71,7 +72,7 @@ class RiverLevelGraphCell: UITableViewCell {
         set.fillFormatter = DefaultFillFormatter { _,_  -> CGFloat in
             return CGFloat(self.chartView.leftAxis.axisMaximum)
         }
-        
+
         let data = LineChartData(dataSet: set)
         data.setDrawValues(true)
         data.setValueFormatter(DefaultValueFormatter(formatter: setupNumberFormatter(toDigits: 2)))

@@ -19,12 +19,9 @@ class SaifonInfoDetailsTVController: UITableViewController {
         
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         print("[SaifonInfoDetailsTVController] Details passed is", descDetails)
+        
+        self.navigationController?.deinitLargeTitles()
         
         self.edgesForExtendedLayout = UIRectEdge()
         uitvSIDTVCContents.rowHeight = UITableViewAutomaticDimension

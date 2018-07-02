@@ -33,6 +33,8 @@ class MainTabController: UITabBarController, MBProgressHUDDelegate {
         
         self.navigationItem.title = "S.A.I.F.O.N."
         self.navigationItem.hidesBackButton = true
+        self.navigationController?.initLargeTitles()
+        
         UITabBar.appearance().tintColor = UIColor.white
         UITabBar.appearance().barTintColor = UIColor(red: CGFloat(42/255.0), green: CGFloat(43/255.0), blue: CGFloat(60/255.0), alpha: CGFloat(1.0))
         
@@ -49,19 +51,7 @@ class MainTabController: UITabBarController, MBProgressHUDDelegate {
         ProgressHUD.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
-
-//extension MainTabController: UITabBarControllerDelegate {
-//    
-//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        print("Tapped!")
-//    }
-//}
 
 
 

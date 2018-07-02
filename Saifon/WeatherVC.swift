@@ -45,6 +45,7 @@ class WeatherVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.navigationController?.initLargeTitles()
         let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshed(_:)))
         
         self.tabBarController?.navigationController?.navigationBar.tintColor = .white
@@ -158,7 +159,12 @@ class WeatherVC: UIViewController {
                 
                 DispatchQueue.main.async {
                     
-                    self.weatherList = response
+                    guard let responseData = response else {
+                        Alert().showAlert(self, title: "Amaran!", message: "Gagal untuk mendapatkan maklumat.")
+                        return
+                    }
+                    
+                    self.weatherList = responseData
                     self.weatherList = self.updateSaifonCompas(self.weatherList)
                     self.loadingSpinner.removeLoadingScreen()
                     self.collectionView.reloadData()

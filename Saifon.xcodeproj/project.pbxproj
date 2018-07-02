@@ -104,6 +104,7 @@
 		9E7F51FD1E77D391005DE243 /* compass2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51FB1E77D391005DE243 /* compass2.png */; };
 		9E7F51FF1E77DA38005DE243 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F51FE1E77DA38005DE243 /* GoogleService-Info.plist */; };
 		9EB5B616202AF8ED00CC6D0E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5B615202AF8ED00CC6D0E /* Extension.swift */; };
+		9EEFD45620468B1D00E13AAE /* PlaceHolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFD45520468B1D00E13AAE /* PlaceHolderCell.swift */; };
 		9EFCCCD81E793FEA00324ADF /* bangunanbiru.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EFCCCD71E793FEA00324ADF /* bangunanbiru.png */; };
 		B7127C041CFE8EBB00FA87F9 /* ProcessLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7127C031CFE8EBB00FA87F9 /* ProcessLoginController.swift */; };
 		B7127C081CFECC3B00FA87F9 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7127C071CFECC3B00FA87F9 /* MainTabController.swift */; };
@@ -249,6 +250,7 @@
 		9E7F51FB1E77D391005DE243 /* compass2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass2.png; sourceTree = "<group>"; };
 		9E7F51FE1E77DA38005DE243 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9EB5B615202AF8ED00CC6D0E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9EEFD45520468B1D00E13AAE /* PlaceHolderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderCell.swift; sourceTree = "<group>"; };
 		9EFCCCD71E793FEA00324ADF /* bangunanbiru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bangunanbiru.png; sourceTree = "<group>"; };
 		A74349147E402B6C9212F0CF /* Pods_Saifon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saifon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE5B498A7EAE3B37F43C28F /* Pods-Saifon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saifon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Saifon/Pods-Saifon.release.xcconfig"; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				B74D33701DEC2E1700208A03 /* RLCListGraphDetailsWebDisplayTVC.swift */,
 				B74F0EBA1E2617A5003887E4 /* RLCRiverDetailsTVCell.swift */,
 				9E1BD42E2029A489009702EB /* RiverLevelGraphCell.swift */,
+				9EEFD45520468B1D00E13AAE /* PlaceHolderCell.swift */,
 			);
 			name = RiverListController;
 			sourceTree = "<group>";
@@ -931,6 +934,7 @@
 				B71EC21D1DACA874008C35AA /* RLCListDetailsDisplayController.swift in Sources */,
 				B7127C041CFE8EBB00FA87F9 /* ProcessLoginController.swift in Sources */,
 				B7127C0A1CFED2AA00FA87F9 /* SaifonVController.swift in Sources */,
+				9EEFD45620468B1D00E13AAE /* PlaceHolderCell.swift in Sources */,
 				B7E7F4101CFD2A8D002FB5C3 /* AppDelegate.swift in Sources */,
 				9E7F51DF1E7138B2005DE243 /* Alert.swift in Sources */,
 				B74F0EBB1E2617A5003887E4 /* RLCRiverDetailsTVCell.swift in Sources */,
